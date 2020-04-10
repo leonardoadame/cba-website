@@ -37,3 +37,12 @@ npm run build
 ```
 npm run deploy
 ```
+
+## Testing
+
+```bash
+npm test                  # run all linters
+npm run test:eslint       # run eslint
+npm run test:stylelint    # run stylelint
+npm run test:prettier     # run prettier linters
+```
