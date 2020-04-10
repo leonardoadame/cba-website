@@ -1,4 +1,4 @@
-# Single language website starter for CMintS.
+# Chromium Browser Automation website
 
 ## Links
 
