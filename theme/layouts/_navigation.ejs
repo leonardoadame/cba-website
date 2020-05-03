@@ -1,17 +1,40 @@
 <nav id="main-navigation">
-  <% function recNav(navig) { %>
+  <% function recNav(ft) {
+    let excludeFile = [];
+    %>
     <ul>
-      <% for ({title, link, sub_items} of navig) { %>
-        <li <%- sub_items ? "class='has-children'" : "" %>>
-          <a href="<%= link %>"><%= title %></a>
-            <% if (sub_items) { %>
-              <% recNav(sub_items);
+      <% for (let {path, name, children, size, type} of ft) {
+          if (type == 'directory') {
+            excludeFile.push(name);
+            const ext = '.md';
+            path = path.concat(ext); %>
+            <li <%- children ? "class='has-children'" : "" %>>
+            <a href="<%= path %>"><%= name %></a>
+            <% if (children) {
+              recNav(children);
             } %>
-        </li>
-      <% } %>
+            </li>
+          <% } else {
+                if (excludeFile.includes(name)) {
+                  continue;
+                };
+                name = name.split('.');
+                name.pop(); %>
+                <li <%- children ? "class='has-children'" : "" %>>
+                <a href="<%= path %>"><%= name %></a>
+                <% if (children) {
+                  recNav(children);
+                } %>
+                </li>
+              <% }
+      } %>
     </ul>
-  <% }
-  recNav(site.navigation) %>
+  <% console.log(excludeFile);
+  console.log(excludeFile.includes('Documentation'));
+  }
+  filteredTree = dirTree('./pages', '.md').children;
+  //console.log(filteredTree.children);
+  recNav(filteredTree) %>
 </nav>
 
 <nav id="mobile-nav">

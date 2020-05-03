@@ -184,6 +184,7 @@ const templateData =
   }
 };
 
+dirTree = require("directory-tree");
 
 const port = {
   http: 3000
