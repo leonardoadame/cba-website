@@ -1,25 +1,27 @@
 <nav id="main-navigation">
   <% function recNav(ft) {
-    let excludeFile = [];
-    %>
+    let excludeFile = []; %>
     <ul>
       <% for (let {path, name, children, size, type} of ft) {
-          if (type == 'directory') {
-            excludeFile.push(name);
-            const ext = '.md';
-            path = path.concat(ext); %>
-            <li <%- children ? "class='has-children'" : "" %>>
-            <a href="<%= path %>"><%= name %></a>
-            <% if (children) {
-              recNav(children);
+            if (type == 'directory') {
+              excludeFile.push(name);
+              const ext = '.md';
+              path = path.concat(ext); %>
+              <li <%- children ? "class='has-children'" : "" %>>
+              <a href="<%= path %>"><%= name %></a>
+              <% if (children) {
+                recNav(children);
             } %>
             </li>
           <% } else {
-                if (excludeFile.includes(name)) {
+                name = name.split('.');
+                name.pop();
+                if (excludeFile.includes(name.toString())) {
                   continue;
                 };
-                name = name.split('.');
-                name.pop(); %>
+                if (name == 'index') {
+                  name = 'Home'; // this is not a good solution for index.ejs I guess
+                }; %>
                 <li <%- children ? "class='has-children'" : "" %>>
                 <a href="<%= path %>"><%= name %></a>
                 <% if (children) {
@@ -29,12 +31,11 @@
               <% }
       } %>
     </ul>
-  <% console.log(excludeFile);
-  console.log(excludeFile.includes('Documentation'));
+  <%
   }
   filteredTree = dirTree('./pages', '.md').children;
-  //console.log(filteredTree.children);
-  recNav(filteredTree) %>
+  recNav(filteredTree);
+  %>
 </nav>
 
 <nav id="mobile-nav">
