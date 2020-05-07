@@ -1,41 +1,44 @@
-<nav id="main-navigation">
-  <% function recNav(ft) {
-    let excludeFile = []; %>
+<% const headerMenuItems = ["documentation", "tutorial", "ready-projects", "what's-new"];
+const regularExpression = /\\|\//;
+const flyoutPages = site.queryPages(({originalPathname}) => headerMenuItems.includes(originalPathname.split(regularExpression)[0]));
+
+let navigation = [];
+let children = []
+let obj = {};
+let value = {};
+
+for (const {originalPathname, pathname, title} of flyoutPages) {
+  if (!(originalPathname.split('\\')[1] | !originalPathname.split('\\')[2])) {
+    obj = {title, pathname, children};
+    obj.children = value;
+    orPath = originalPathname;
+    for (const {originalPathname, pathname, title} of flyoutPages){
+      if (originalPathname == `${orPath}$\\${originalPathname.split('\\').pop()}`){
+        value = {title, pathname};
+        navigation.push(obj);
+      }
+    }
+    } else {
+      navigation.push({title, pathname})
+    }
+};
+console.log(navigation);
+ %>
+
+ <nav id="main-navigation">
+  <% function recNav(navig) { %>
     <ul>
-      <% for (let {path, name, children, size, type} of ft) {
-            if (type == 'directory') {
-              excludeFile.push(name);
-              const ext = '.md';
-              path = path.concat(ext); %>
-              <li <%- children ? "class='has-children'" : "" %>>
-              <a href="<%= path %>"><%= name %></a>
-              <% if (children) {
-                recNav(children);
+      <% for ({title, link, sub_items} of navig) { %>
+        <li <%- sub_items ? "class='has-children'" : "" %>>
+          <a href="<%= link %>"><%= title %></a>
+            <% if (sub_items) { %>
+              <% recNav(sub_items);
             } %>
-            </li>
-          <% } else {
-                name = name.split('.');
-                name.pop();
-                if (excludeFile.includes(name.toString())) {
-                  continue;
-                };
-                if (name == 'index') {
-                  name = 'Home'; // this is not a good solution for index.ejs I guess
-                }; %>
-                <li <%- children ? "class='has-children'" : "" %>>
-                <a href="<%= path %>"><%= name %></a>
-                <% if (children) {
-                  recNav(children);
-                } %>
-                </li>
-              <% }
-      } %>
+        </li>
+      <% } %>
     </ul>
-  <%
-  }
-  filteredTree = dirTree('./pages', '.md').children;
-  recNav(filteredTree);
-  %>
+  <% }
+  recNav(site.navigation) %>
 </nav>
 
 <nav id="mobile-nav">
