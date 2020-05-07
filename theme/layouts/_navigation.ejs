@@ -3,19 +3,20 @@ const regularExpression = /\\|\//;
 const flyoutPages = site.queryPages(({originalPathname}) => headerMenuItems.includes(originalPathname.split(regularExpression)[0]));
 
 let navigation = [];
-let children = []
+let children = [];
 let obj = {};
 let value = {};
 
 for (const {originalPathname, pathname, title} of flyoutPages) {
+  console.log(originalPathname.split('\\')[1], originalPathname.split('\\')[2])
   if (!(originalPathname.split('\\')[1] | !originalPathname.split('\\')[2])) {
     obj = {title, pathname, children};
-    obj.children = value;
     orPath = originalPathname;
     for (const {originalPathname, pathname, title} of flyoutPages){
-      if (originalPathname == `${orPath}$\\${originalPathname.split('\\').pop()}`){
-        value = {title, pathname};
+      if (originalPathname == `${orPath}\\${originalPathname.split('\\').pop()}`){
+        obj.children.push({title, pathname});
         navigation.push(obj);
+        console.log(children);
       }
     }
     } else {
