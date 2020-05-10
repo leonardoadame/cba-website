@@ -3,35 +3,38 @@ const regularExpression = /\\|\//;
 const flyoutPages = site.queryPages(({originalPathname}) => headerMenuItems.includes(originalPathname.split(regularExpression)[0]));
 
 let navigation = [];
-let children = [];
 let obj = {};
-let value = {};
+let childFirst = {};
+let childSecond = {};
 
 for (const {originalPathname, pathname, title} of flyoutPages) {
-  console.log(originalPathname.split('\\')[1], originalPathname.split('\\')[2])
-  if (!(originalPathname.split('\\')[1] | !originalPathname.split('\\')[2])) {
-    obj = {title, pathname, children};
-    orPath = originalPathname;
-    for (const {originalPathname, pathname, title} of flyoutPages){
-      if (originalPathname == `${orPath}\\${originalPathname.split('\\').pop()}`){
-        obj.children.push({title, pathname});
+orPath0 = originalPathname.split('\\')[0];
+orPath1 = originalPathname.split('\\')[1]
+orPath2 = originalPathname.split('\\')[2]
+
+  if (orPath1 && orPath2) {
+    childSecond = {title, pathname};
+    childFirst = {'title':orPath1, 'pathname':`${orPath0}\\${orPath1}`, 'child':childSecond};
+    obj = {'title':orPath0, 'pathname':orPath0, 'child':childFirst};
+    navigation.push(obj);
+  } else if (orPath1 && !orPath2) {
+        childFirst = {title, pathname};
+        obj = {'title':orPath0, 'pathname':orPath0, 'child':childFirst};
         navigation.push(obj);
-        console.log(children);
-      }
-    }
-    } else {
-      navigation.push({title, pathname})
+    } else if (!orPath1 && !orPath2) {
+      obj = {'title':orPath0, 'pathname':orPath0};
+        navigation.push(obj);
     }
 };
-console.log(navigation);
- %>
+console.log(navigation)
+%>
 
  <nav id="main-navigation">
   <% function recNav(navig) { %>
     <ul>
-      <% for ({title, link, sub_items} of navig) { %>
+      <% for ({title, pathname, sub_items} of navig) { %>
         <li <%- sub_items ? "class='has-children'" : "" %>>
-          <a href="<%= link %>"><%= title %></a>
+          <a href="<%= pathname %>"><%= title %></a>
             <% if (sub_items) { %>
               <% recNav(sub_items);
             } %>

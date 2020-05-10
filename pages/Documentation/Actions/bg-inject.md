@@ -1,21 +1,18 @@
 ---
 title: bg-inject
 ---
-Inject script into backroung page of the extension.
 
-Abilities:
-<ul>
-<li>Access to background page of the extension </li>
-<li>Use Chrome Api</li>
-</ul>
+Inject script into backroung page of the extension. Abilities:
+
+*   Access to background page of the extension
+*   Use Chrome Api
 
 Tips:
-<ul>
-<li>Stop project workflow when using asynchronous functions using sendBgInstruction variable "sendBgInstruction = false;"</li>
-<li>Don't forget to continue the project workflow after stoping it "sendInstruction();"</li>
-<li>use clipboard object for message passing "clipboard["myKey"] = value"</li>
-<li>Jump to another action "actionToPlay(num);"</li>
-</ul>
+
+*   Stop project workflow when using asynchronous functions using sendBgInstruction variable "sendBgInstruction = false;"
+*   Don't forget to continue the project workflow after stoping it "sendInstruction();"
+*   use clipboard object for message passing "clipboard\["myKey"\] = value"
+*   Jump to another action "actionToPlay(num);"
 
 Example:
 

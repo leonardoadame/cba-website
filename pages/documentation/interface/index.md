@@ -3,9 +3,9 @@ title: Interface
 ---
 
 The main part of the interface are:
-<ul>
-<li><a href="/project">Projects datagrid</a></li>
-<li><a href = "/actions-grid">Actions</a></li>
-<li><a href = "/functions-grid">and functions</a></li>
-</ul>
-<img src="sites/default/files/interface.jpg" width="400px">
+
+*   [Projects datagrid](/project)
+*   [Actions](/actions-grid)
+*   [and functions](/functions-grid)
+
+![](sites/default/files/interface.jpg =400x)
