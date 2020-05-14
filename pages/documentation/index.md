@@ -6,16 +6,16 @@ title: Documentation
 
 CBA is automation system for chrome browser which is designed to help people with some of their daily routine work and also to provide collection of ready useful functions that will help them to solve such issues like:
 
-*   Filling annoying forms
-*   Passing long registration forms to do simple test.
-*   Like alll posts of your pages or groups, adding friends to your promotional account
-*   navigation to your favorite content
-*   and much much more...
+- Filling annoying forms
+- Passing long registration forms to do simple test.
+- Like alll posts of your pages or groups, adding friends to your promotional account
+- navigation to your favorite content
+- and much much more...
 
 ### Automation creation
 
-*   Create project
-*   Record
-*   Edit automation
-*   Manage
-*   and Play
+- Create project
+- Record
+- Edit automation
+- Manage
+- and Play

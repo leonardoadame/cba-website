@@ -16,7 +16,8 @@ Tips:
 
 Example:
 
-sendBgInstruction = false;  // Stop workflow of the CBA
+`sendBgInstruction = false;  // Stop workflow of the CBA
 chrome.windows.create({ url: clipboard["scrAlias"]}, function(){
 	sendInstruction();  // Continue with CBA workflow
 });
+`
