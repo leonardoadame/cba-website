@@ -1,33 +1,20 @@
 <% const headerMenuItems = ["documentation", "tutorial", "ready-projects", "what's-new"];
 const flyoutPages = site.queryPages(({originalPathname}) => headerMenuItems.includes(originalPathname.split('/')[0]));
 
-let navigation = [];
-let obj = {};
-let childFirst = {};
-let childSecond = {};
-
-for (const {originalPathname, pathname, title} of flyoutPages) {
-orPath0 = originalPathname.split('/')[0];
-orPath1 = originalPathname.split('/')[1]
-orPath2 = originalPathname.split('/')[2]
-
-//for (topLevelItem of headerMenuItems) {
-  //const secondLevel = site.queryPages(({originalPathname}) => originalPathname.startsWith(`${topLevelItem}/`) && originalPathname.split("/").length === 2);
-    //console.log(secondLevel)
-//}  
-
-  if (orPath1 && orPath2) {
-    childSecond = {title, pathname};
-    childFirst = {'title':orPath1, 'pathname':`${orPath0}/${orPath1}`, 'child':childSecond};
-    obj = {'title':orPath0, 'pathname':orPath0, 'child':childFirst};
-    navigation.push(obj);
-  } else if (orPath1 && !orPath2) {
-        childFirst = {title, pathname};
-        obj = {'title':orPath0, 'pathname':orPath0, 'child':childFirst};
-        navigation.push(obj);
-    } else if (!orPath1 && !orPath2) {
-      obj = {'title':orPath0, 'pathname':orPath0};
-        navigation.push(obj);
+function getSubPages(nav)
+{
+  const subPages = query(({originalPathname}) => {
+    const parentPath = `${nav.originalPathname}/`;
+    return originalPathname.startsWith(parentPath) &&
+           !(originalPathname.substring(parentPath.length).includes("/"));
+  });
+  if (subPages.length) {
+    if (!nav.sub_items){
+      nav.sub_items = [];
+      for (const subPage of subPages) {
+        nav.sub_items.push(subPage);
+        getSubPages(subPage);
+      }
     }
 };
 
@@ -59,11 +46,11 @@ recData(navigation);
  <nav id="main-navigation">
   <% function recNav(navig) { %>
     <ul>
-      <% for ({title, pathname, newChild} of navig) { %>
-        <li <%- newChild ? "class='has-children'" : "" %>>
-          <a href="<%= pathname %>"><%= title %></a>
-            <% if (newChild) { %>
-              <% recNav(newChild);
+      <% for ({title, pathname, sub_items} of navig) { %>
+        <li <%- sub_items ? "class='has-children'" : "" %>>
+          <a href="/<%= pathname %>"><%= title %></a>
+            <% if (sub_items) { %>
+              <% recNav(sub_items);
             } %>
         </li>
       <% } %>

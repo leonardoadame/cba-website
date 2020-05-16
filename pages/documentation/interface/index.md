@@ -4,8 +4,8 @@ title: Interface
 
 The main part of the interface are:
 
-*   [Projects datagrid](/project)
-*   [Actions](/actions-grid)
-*   [and functions](/functions-grid)
+- [Projects datagrid](/documentation/interface/project-datagrid)
+- [Actions](/documentation/interface/actions-datagrid)
+- [and functions](/documentation/interface/functions-datagrid)
 
-![](/images/interface.jpg | width=400)
+![](/images/interface.jpg)

@@ -4,7 +4,7 @@ title: Tutorial
 
 # Tutorials
 
-### [Registration demo (video)](/node/26) 
-### [Facebook demo (video)](/facebook-demo) 
-### [Recording (video)](/video-demo1) 
-### [Presentation for CBA (video)](/video-presenation)
+## [Registration demo (video)](/tutorial/registration-demo) 
+## [Facebook demo (video)](/tutorial/facebook-demo) 
+## [Recording (video)](/tutorial/recording) 
+## [Presentation for CBA (video)](/tutorial/video-presenation)
