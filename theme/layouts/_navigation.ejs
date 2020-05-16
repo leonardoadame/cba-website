@@ -1,5 +1,7 @@
-<% const headerMenuItems = ["documentation", "tutorial", "ready-projects", "what's-new"];
-const flyoutPages = site.queryPages(({originalPathname}) => headerMenuItems.includes(originalPathname.split('/')[0]));
+<%
+const menuItems = ["", "documentation", "tutorial", "ready-projects", 
+                   "what's-new"];
+const query = site.queryPages;
 
 function getSubPages(nav)
 {
@@ -16,31 +18,15 @@ function getSubPages(nav)
         getSubPages(subPage);
       }
     }
-};
+  }
+  return nav;
+}
 
-let newNavigation = [];
-function recData (navigPath) {
-  
-for (const {title, pathname, child} of navigPath) {
-  let newObj = {};
-  let newChild = [];
-  if (child) {
-    if(newNavigation.find(elem => elem.title == title)){
-      continue;
-    };
-    filtered = navigation.filter(elem => elem.title == title);
-    for (const elem of filtered) {
-      if(elem.child) {
-        //filtered2 = filtered.filter(elem => elem.child[0] == el.child[0]);
-        newChild.push(elem.child);
-    }
-  }
-    obj = {title, pathname, newChild};
-  newNavigation.push(obj);
-  }
-  }
-};
-recData(navigation);
+const navigation = [];
+for (const menuItem of menuItems) {
+  const page = query(({originalPathname}) => originalPathname === menuItem)[0];
+  navigation.push(getSubPages(page));
+}
 %>
 
  <nav id="main-navigation">
@@ -56,7 +42,7 @@ recData(navigation);
       <% } %>
     </ul>
   <% }
-  recNav(newNavigation) %>
+  recNav(navigation) %>
 </nav>
 
 <nav id="mobile-nav">
