@@ -1,6 +1,4 @@
 <%
-const menuItems = ["", "documentation", "tutorial", "ready-projects", 
-                   "what's-new"];
 const query = site.queryPages;
 
 function getSubPages(nav)
@@ -23,7 +21,7 @@ function getSubPages(nav)
 }
 
 const navigation = [];
-for (const menuItem of menuItems) {
+for (const menuItem of site.menuItems) {
   const page = query(({originalPathname}) => originalPathname === menuItem)[0];
   navigation.push(getSubPages(page));
 }
@@ -47,7 +45,7 @@ for (const menuItem of menuItems) {
 
 <nav id="mobile-nav">
 <select>
-   <% for ({title, link, sub_items} of site.navigation) { %>
+   <% for ({title, link, sub_items} of navigation) { %>
       <option value="<%- link %>"><%- title %></option>
     <% } %>
 </select>

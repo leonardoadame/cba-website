@@ -1,5 +1,6 @@
 ---
 title: Fb like unlike
+permalink: fblikeunlike
 ---
 
 Hi guys here is the [ready project](/fblike.txt) for FB like and unlike beforehand it was ready function, but after Facebook made some updates it's stopped to work, so now you have this ability again just import the project use it. If you have a group and would like to keep activity in your group, so the people can fill themself that you appreciate their activity you can use this nice scenario : The project consists of two actions:

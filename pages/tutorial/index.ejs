@@ -1,0 +1,11 @@
+---
+title: Tutorial
+---
+
+<h1> Tutorials </h1>
+<%
+tutorialList = site.queryPages(({originalPathname}) => {
+return originalPathname && originalPathname.split('/')[0] == 'tutorial'})
+for (const {title, pathname, originalPathname} of tutorialList) { %>
+    <h2> </p><a href = '<%= pathname %>'><%= title %> (video)</a></h2>
+<% } %>

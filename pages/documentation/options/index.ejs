@@ -1,0 +1,20 @@
+---
+title: Options
+permalink: options
+---
+
+Section that describe extension options page. Options:
+<%
+optionsList = site.queryPages(({originalPathname}) => {
+return originalPathname && originalPathname.split('/')[0] == 'documentation' && 
+    originalPathname.split('/')[1] == 'options'}) %>
+<ul>
+<% for (const {title, pathname, originalPathname} of optionsList) {
+    if (originalPathname !== 'documentation/options') { %>
+        <li><a href = '<%= pathname %>'><%= title %></a></li>
+    <% }
+} %>
+</ul>
+
+Access to options page:
+<p><img src='/images/access-options.jpg'></p>

@@ -1,6 +1,7 @@
 ---
 title: Version 6.0
+permalink: new_6
 ---
 
 - Fixed special characters bug.
-- [New action for pausing the project workflow](/documentation/actions/pause)
+- [New action for pausing the project workflow](/pause)
