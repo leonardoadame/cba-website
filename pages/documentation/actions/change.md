@@ -1,9 +1,12 @@
 ---
 title: change
 permalink: change
+weight: 5
 ---
 
-Change action mostly are used on textboxes and textareas, they are Triggering focus and change events on DOM element. Change action uses Jquery selector to Change the value of the DOM Element. Also users can use CBA placeholders:
+Change action mostly are used on textboxes and textareas, they are Triggering focus and change events on DOM element. 
+
+Change action uses Jquery selector to Change the value of the DOM Element. Also users can use CBA placeholders:
 
 ## Placeholders
 
@@ -11,6 +14,10 @@ Change action mostly are used on textboxes and textareas, they are Triggering fo
 
 ![](/images/Change.jpg)
 
-`<$clipboard=>` - Clipboard placeholder is used to access [clipboard object](clipboard) data. So now you can access any data from clipboard object for change action using current syntax: `<$clipboard=propertyName>` so this placeholder will call `clipboard["propertyName"]`. 
+`<$clipboard=>` - Clipboard placeholder is used to access [clipboard object](clipboard) data. So now you can access any data from clipboard object for change action using current syntax: 
+
+`<$clipboard=propertyName>` 
+
+so this placeholder will call `clipboard["propertyName"]`. 
 
 ![](/images/clipboard-placeholder.jpg)

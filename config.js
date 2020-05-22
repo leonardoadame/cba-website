@@ -8,8 +8,6 @@ const templateData =
   }
 };
 
-
-
 const port = {
   http: 3000
 };

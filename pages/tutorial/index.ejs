@@ -5,7 +5,11 @@ title: Tutorial
 <h1> Tutorials </h1>
 <%
 tutorialList = site.queryPages(({originalPathname}) => {
-return originalPathname && originalPathname.split('/')[0] == 'tutorial'})
-for (const {title, pathname, originalPathname} of tutorialList) { %>
-    <h2> </p><a href = '<%= pathname %>'><%= title %> (video)</a></h2>
-<% } %>
+return originalPathname && originalPathname.split('/')[0] == 'tutorial'}) %>
+<ul>
+<% for (const {title, pathname, originalPathname} of tutorialList) { 
+    if (originalPathname !== 'tutorial') { %>
+    <li><a href = '<%= pathname %>'><%= title %> (video)</a></li>
+  <%  }
+ } %>
+</ul>

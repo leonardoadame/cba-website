@@ -1,6 +1,7 @@
 ---
 title: Version 8.0
 permalink: new_8
+weight: 1
 ---
 
 - New [options page](/options)

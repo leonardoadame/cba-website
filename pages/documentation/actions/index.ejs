@@ -1,16 +1,19 @@
 ---
 title: Actions
 permalink: actions
+weight: 2
 ---
 Here is the list of CBA Action Types:
 <%
 actionsList = site.queryPages(({originalPathname}) => {
-return originalPathname && originalPathname.split('/')[0] == 'documentation' && 
-    originalPathname.split('/')[1] == 'actions'}) %>
-<ol>
-<% for (const {title, pathname, originalPathname} of actionsList) {
-    if (originalPathname !== 'documentation/actions') { %>
-    <li><a href = '<%= pathname %>'><%= title %></a></li>
-    <% } 
-} %>
-</ol>
+    return originalPathname && originalPathname.split('/')[0] == 'documentation' && 
+        originalPathname.split('/')[1] == 'actions'}) %>
+    <ul>
+    <% for (const {title, pathname, originalPathname} of actionsList) {
+        if (originalPathname !== 'documentation/actions') { %>
+            <li><a href = '<%= pathname %>'><%= title %></a></li>
+        <% }
+    } %>
+    </ul>
+%>
+

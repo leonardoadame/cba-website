@@ -12,9 +12,12 @@ function getSubPages(nav)
     if (!nav.sub_items){
       nav.sub_items = [];
       for (const subPage of subPages) {
+        if(subPage.menu !== false) {
         nav.sub_items.push(subPage);
         getSubPages(subPage);
+        }
       }
+      nav.sub_items.sort((a, b) => (a.weight > b.weight) ? 1 : -1);
     }
   }
   return nav;
