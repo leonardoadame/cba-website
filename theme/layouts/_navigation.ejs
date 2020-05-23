@@ -8,16 +8,23 @@ function getSubPages(nav)
     return originalPathname.startsWith(parentPath) &&
            !(originalPathname.substring(parentPath.length).includes("/"));
   });
+  
   if (subPages.length) {
     if (!nav.sub_items){
       nav.sub_items = [];
       for (const subPage of subPages) {
-        if(subPage.menu !== false) {
-        nav.sub_items.push(subPage);
-        getSubPages(subPage);
-        }
+        if (subPage.menu !== false) {
+          nav.sub_items.push(subPage);
+          getSubPages(subPage);
       }
-      nav.sub_items.sort((a, b) => (a.weight > b.weight) ? 1 : -1);
+    }
+      nav.sub_items.sort((a, b) => {
+        if (!a.weight)
+          return 1;
+        if (!b.weight)
+          return -1;
+        return a.weight - b.weight;
+      });
     }
   }
   return nav;

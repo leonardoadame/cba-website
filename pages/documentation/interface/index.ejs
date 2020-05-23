@@ -4,15 +4,5 @@ weight: 1
 ---
 
 The main part of the interface are:
-<%
-interfaceList = site.queryPages(({originalPathname}) => {
-return originalPathname && originalPathname.split('/')[0] == 'documentation' && 
-    originalPathname.split('/')[1] == 'interface'}) %>
-<ul>
-<% for (const {title, pathname, originalPathname} of interfaceList) { 
-    if (originalPathname !== 'documentation/interface') { %>
-    <li><a href = '<%= pathname %>'><%= title %></a></li>
-    <% }
-} %>
-</ul>
+<%- site.pagesList('documentation/interface'); %>
 <img src= "/images/interface.jpg")
