@@ -10,22 +10,20 @@ function getSubPages(nav)
   });
   
   if (subPages.length) {
-    if (!nav.sub_items){
       nav.sub_items = [];
       for (const subPage of subPages) {
         if (subPage.menu !== false) {
           nav.sub_items.push(subPage);
           getSubPages(subPage);
-      }
+        }
     }
-      nav.sub_items.sort((a, b) => {
-        if (!a.weight)
-          return 1;
-        if (!b.weight)
-          return -1;
-        return a.weight - b.weight;
-      });
-    }
+    nav.sub_items.sort((a, b) => {
+      if (!a.weight)
+        return 1;
+      if (!b.weight)
+        return -1;
+      return a.weight - b.weight;
+    });
   }
   return nav;
 }
