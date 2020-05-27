@@ -11,4 +11,3 @@ title: Homepage
 1. Ability of using CBA ready functions.
 1. Ability to write your own code that will have access to web page's DOM.
 1. And much much more...
-    
