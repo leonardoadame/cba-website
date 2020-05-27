@@ -17,13 +17,7 @@ function getSubPages(nav)
           getSubPages(subPage);
         }
     }
-    nav.sub_items.sort((a, b) => {
-      if (!a.weight)
-        return 1;
-      if (!b.weight)
-        return -1;
-      return a.weight - b.weight;
-    });
+    nav.sub_items.sort(site.sortByWeight);
   }
   return nav;
 }

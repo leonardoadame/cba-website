@@ -5,29 +5,28 @@ const templateData =
     subtitle: "Chromium Browser Automation (extension for chrome browser automation)",
     menuItems: ["", "documentation", "tutorial", "ready-projects",
       "what's-new"],
+    sortByWeight: (a, b) =>
+    {
+      if (!a.weight)
+        return 1;
+      if (!b.weight)
+        return -1;
+      return a.weight - b.weight;
+    },
     listOfPages: function (pathname)
     {
       const query = templateData.site.queryPages;
       const {originalPathname} = query((page) => page.pathname === pathname)[0];
 
-      let pagesQuery = query((page) => page.originalPathname.startsWith(originalPathname) &&
+      const pagesQuery = query((page) => page.originalPathname.startsWith(originalPathname) &&
         page.originalPathname.replace(originalPathname, "").split("/").length === 2);
 
-      pagesQuery.sort((a, b) =>
-      {
-        if (!a.weight)
-          return 1;
-        if (!b.weight)
-          return -1;
-        return a.weight - b.weight;
-      });
+      pagesQuery.sort(templateData.site.sortByWeight);
 
       const items = pagesQuery.map((item) =>
         `<li><a href = '${item.pathname}'>${item.title}</a></li>`);
 
-      const result = `<ul>${items.join("")}</ul>`;
-
-      return result;
+      return `<ul>${items.join("")}</ul>`;
     }
   }
 };
