@@ -9,7 +9,7 @@ const breadcrumbNames = queryPage[0].originalPathname.split('/'); %>
     const queryPath = query(({title}) => name == title.toLowerCase().replace(' ','-'));
     const lastBread = name !== breadcrumbNames[breadcrumbNames.length -1];
     %>
-    <span <%- lastBread ? "class = 'items'" : "" %> >
+    <span <%- lastBread ? "class = 'breadcrumb-items'" : "" %> >
     <a <%- lastBread ? "href = 'queryPath[0].pathname'" : "" %>><%= queryPath[0].title %></a>
     </span>
 <% } } %>
