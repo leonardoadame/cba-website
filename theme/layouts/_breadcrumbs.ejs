@@ -1,0 +1,16 @@
+<%
+const query = site.queryPages;
+if (page.title !== 'Homepage') {
+const queryPage = query(({originalPathname}) => 
+    originalPathname.split('/').pop() == page.title.toLowerCase().replace(' ','-'));
+const breadcrumbNames = queryPage[0].originalPathname.split('/'); %>
+<div id = breadcrumb>
+<% for (name of breadcrumbNames) {
+    const queryPath = query(({title}) => name == title.toLowerCase().replace(' ','-'));
+    const lastBread = name !== breadcrumbNames[breadcrumbNames.length -1];
+    %>
+    <span <%- lastBread ? "class = 'items'" : "" %> >
+    <a <%- lastBread ? "href = 'queryPath[0].pathname'" : "" %>><%= queryPath[0].title %></a>
+    </span>
+<% } } %>
+</div>
