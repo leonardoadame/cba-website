@@ -37,12 +37,6 @@ text-decoration: none;
 color: #262626;
 }
 
-.breadcrumb-items a
-{
-  color: #797979;
-  text-shadow: none!important;
-}
-
 header h1 a:hover
 {
   color:#3253ad;
@@ -57,7 +51,6 @@ main
 
 #breadcrumb
 {
-  padding: 5px 5px 5px 10px;
   font-size: 0.92em;
   color: #999;
   background-color: #f1f1f1;
@@ -68,12 +61,25 @@ main
 #breadcrumb a
 {
   margin-right: 6px;
-  text-shadow: 1px 1px 0px #fff;
+  color: #797979;
 }
 
-.breadcrumb-items:after
+#breadcrumb li:after
 {
   content: '»';
   margin-right: 6px;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+#breadcrumb ol
+{
+  display: flex;
+  list-style: none;
+  padding: 5px 5px 5px 10px;
+  margin: 0;
+}
+
+#breadcrumb span
+{
   text-shadow: 1px 1px 0px #fff;
 }

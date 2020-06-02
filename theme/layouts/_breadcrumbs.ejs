@@ -1,16 +1,23 @@
 <%
 const query = site.queryPages;
-if (page.title !== 'Homepage') {
-const queryPage = query(({originalPathname}) => 
-    originalPathname.split('/').pop() == page.title.toLowerCase().replace(' ','-'));
-const breadcrumbNames = queryPage[0].originalPathname.split('/'); %>
-<div id = breadcrumb>
-<% for (name of breadcrumbNames) {
-    const queryPath = query(({title}) => name == title.toLowerCase().replace(' ','-'));
-    const lastBread = name !== breadcrumbNames[breadcrumbNames.length -1];
-    %>
-    <span <%- lastBread ? "class = 'breadcrumb-items'" : "" %> >
-    <a <%- lastBread ? "href = 'queryPath[0].pathname'" : "" %>><%= queryPath[0].title %></a>
-    </span>
-<% } } %>
-</div>
+if (page.pathname !== '') {
+  const queryPage = query(({pathname}) => page.pathname === pathname);
+  const names = queryPage[0].originalPathname.split('/'); %>
+  
+  <nav aria-label="breadcrumb" id = 'breadcrumb'>
+  <ol>
+    <% for (const name of names) {
+      queryEachName = query(({originalPathname}) => 
+        name == originalPathname.split('/')[originalPathname.split('/').length-1]);
+      lastBread = name == names[names.length -1];
+      if (lastBread) { %>
+        <span aria-current='page'><%= queryEachName[0].title %></span>
+      <% }  else { %>
+        <li>
+        <a href = '<%= queryEachName[0].pathname %>'><%= queryEachName[0].title %></a>
+        </li>
+    <% } 
+    } %>
+  </ol>
+</nav>
+<% } %>
