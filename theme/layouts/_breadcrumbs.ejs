@@ -1,0 +1,21 @@
+<%
+const query = site.queryPages;
+if (page.pathname !== '') {
+  const [currentPage] = query(({pathname}) => page.pathname === pathname);
+  const pathnameParts = currentPage.originalPathname.split('/'); %>
+  
+  <nav aria-label='Breadcrumb' id='breadcrumb'>
+  <ol>
+    <% 
+    for (let i=0; i < pathnameParts.length; i++) {
+      const pickOriginalPathname = pathnameParts.slice(0, i).join("/");
+      const [{pathname, title}] = query(({originalPathname}) => 
+        originalPathname == pickOriginalPathname); %>
+        <li>
+        <a href='<%= pathname %>'><%= title %></a>
+        </li>
+    <% } %>
+    <li aria-current='page'><%= currentPage.title %></li>
+  </ol>
+</nav>
+<% } %>
