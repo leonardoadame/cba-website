@@ -27,6 +27,31 @@ const templateData =
         `<li><a href = '${item.pathname}'>${item.title}</a></li>`);
 
       return `<ul>${items.join("")}</ul>`;
+    },
+    getSubPages: function (nav)
+    {
+      const query = templateData.site.queryPages
+      const subPages = query(({originalPathname}) =>
+      {
+        const parentPath = `${nav.originalPathname}/`;
+        return originalPathname.startsWith(parentPath) &&
+               !(originalPathname.substring(parentPath.length).includes("/"));
+      });
+
+      if (subPages.length)
+      {
+        nav.sub_items = [];
+        for (const subPage of subPages)
+        {
+          if (subPage.menu !== false)
+          {
+            nav.sub_items.push(subPage);
+            templateData.site.getSubPages(subPage);
+          }
+        }
+        nav.sub_items.sort(templateData.site.sortByWeight);
+      }
+      return nav;
     }
   }
 };
