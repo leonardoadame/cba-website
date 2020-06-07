@@ -1,31 +1,11 @@
 <%
 const query = site.queryPages;
-
-function getSubPages(nav)
-{
-  const subPages = query(({originalPathname}) => {
-    const parentPath = `${nav.originalPathname}/`;
-    return originalPathname.startsWith(parentPath) &&
-           !(originalPathname.substring(parentPath.length).includes("/"));
-  });
-  
-  if (subPages.length) {
-      nav.sub_items = [];
-      for (const subPage of subPages) {
-        if (subPage.menu !== false) {
-          nav.sub_items.push(subPage);
-          getSubPages(subPage);
-        }
-    }
-    nav.sub_items.sort(site.sortByWeight);
-  }
-  return nav;
-}
+subPages = site.getSubPages;
 
 const navigation = [];
 for (const menuItem of site.menuItems) {
   const page = query(({originalPathname}) => originalPathname === menuItem)[0];
-  navigation.push(getSubPages(page));
+  navigation.push(subPages(page));
 }
 %>
 
@@ -35,8 +15,8 @@ for (const menuItem of site.menuItems) {
       <% for ({title, pathname, sub_items} of navig) { %>
         <li <%- sub_items ? "class='has-children'" : "" %>>
           <a href="/<%= pathname %>"><%= title %></a>
-            <% if (sub_items) { %>
-              <% recNav(sub_items);
+            <% if (sub_items) {
+              recNav(sub_items);
             } %>
         </li>
       <% } %>
