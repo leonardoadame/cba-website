@@ -4,7 +4,7 @@ if (page.pathname !== "") {
   const [currentPage] = query(({pathname}) => page.pathname === pathname);
   const pathnameParts = currentPage.originalPathname.split("/"); %>
   
-  <nav aria-label="Breadcrumb" id="breadcrumb">
+  <nav aria-label="Breadcrumb" id="breadcrumb"></nav>
   <ol>
     <% 
     for (let i=0; i < pathnameParts.length; i++) {
@@ -17,5 +17,5 @@ if (page.pathname !== "") {
     <% } %>
     <li aria-current="page"><%= currentPage.title %></li>
   </ol>
-</nav>
+  </nav>
 <% } %>
