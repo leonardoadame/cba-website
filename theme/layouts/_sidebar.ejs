@@ -1,32 +1,25 @@
 <%
 const query = site.queryPages;
-subPages = site.getSubPages;
+const [currentPage] = query(({pathname}) => page.pathname === pathname);
+const currenOriginalPath = currentPage.originalPathname;
 
 const navigation = [];
 for (const menuItem of site.menuItems) {
-  const page = query(({originalPathname}) => originalPathname === menuItem)[0];
-  navigation.push(subPages(page));
+  let otherPage = query(({originalPathname}) => originalPathname === menuItem)[0];
+  if (menuItem === currenOriginalPath.split("/")[0]) {
+    otherPage = site.getSubPages(otherPage);
+  }
+  navigation.push(otherPage);
 }
-
-const [currentPage] = query(({pathname}) => page.pathname === pathname);
-let currentPathname = currentPage.originalPathname.split("/");
-pathnameList = [];
-for (let i=currentPathname.length-1; i >= 0; i--) {
-  pathnameList.push(currentPathname.join("/"));
-  currentPathname = currentPathname.slice(0,i);
-}
-
   function recNav(navig) { %>
     <ul>
       <% for (const {title, pathname, originalPathname, sub_items} of navig) { %>
-        <li <%- originalPathname.split("/").length == 1 ? "class='primary-menu'" : "" %>>
+        <li <%- currenOriginalPath == originalPathname &&
+          currenOriginalPath.split("/").length == 1  ? "class='current-menu'" : "" %>>
           <a href="/<%= pathname %>"><%= title %></a>
             <%
-            for (let i=0; i < pathnameList.length; i++) {
-              if (sub_items && originalPathname == pathnameList[i]) {
+              if (sub_items) {
                 recNav(sub_items);
-                break;
-              }
             } %>
         </li>
       <% } %>

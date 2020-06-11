@@ -1,15 +1,36 @@
 #sidebar
 {
-  margin: 0px auto;
   font-weight: bold;
   font-size: 14px;
-  width: 300px;
+  padding: 0px 45px 0px 0px;
+  white-space: nowrap;
+}
+
+#sidebar h2
+{
+  margin: 0;
 }
 
 #sidebar li
 {
   list-style: none;
-  line-height: 1.5;
+  line-height: 2.5;
+}
+
+#sidebar > ul
+{
+  padding: 0 10px;
+ 
+}
+
+#sidebar > ul ul
+{
+  padding: 0 10px;
+}
+
+#sidebar ul ul ul
+{
+  padding: 0 25px;
 }
 
 #sidebar a
@@ -18,23 +39,27 @@
   color: #666666;
 }
 
-#sidebar a:hover
+#sidebar li:hover > a, #sidebar li.current-menu > a
 {
   color: #333333;
 }
 
-#sidebar .primary-menu:before
+#sidebar > ul > li:before
 {
   content: url('/images/arrow_bullet.png');
 }
 
-#sidebar .primary-menu
+#sidebar > ul > li:hover:before, #sidebar li.current-menu:before
 {
-  border-bottom: 1px solid #eee;
-  padding: 8px 0px 8px 24px;
+content: url('/images/arrow_bullet_dark.png');
 }
 
-#sidebar .primary-menu > a
+#sidebar > ul > li
+{
+  border-bottom: 1px solid #eee;
+}
+
+#sidebar > ul >li > a
 {
   color:#2883DE;
 }

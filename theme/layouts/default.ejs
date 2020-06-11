@@ -10,12 +10,17 @@
       <% include _navigation %>
     </header>
     <main>
-      <% include _breadcrumbs %>
-      <h1><%= page.title %></h1>
-      <%- page.body %>
+      <nav id="sidebar">
+        <h2>Main menu</h2>
+        <%- include _sidebar %>
+      </nav>
+      <article>
+        <nav aria-label="Breadcrumb" id="breadcrumb">
+          <% include _breadcrumbs %>
+        </nav>
+        <h1><%= page.title %></h1>
+        <%- page.body %>
+      </article>
     </main>
-    <nav id="sidebar">
-    <%- include _sidebar %>
-    </nav>
   </body>
 </html>
