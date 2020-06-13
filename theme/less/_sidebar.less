@@ -2,8 +2,9 @@
 {
   font-weight: bold;
   font-size: 14px;
-  padding: 0px 45px 0px 0px;
+  padding: 15px 45px 0px 0px;
   white-space: nowrap;
+  grid-area: sidebar;
 }
 
 #sidebar h2
@@ -20,7 +21,6 @@
 #sidebar > ul
 {
   padding: 0 10px;
- 
 }
 
 #sidebar > ul ul
@@ -37,6 +37,11 @@
 {
   text-decoration: none;
   color: #666666;
+}
+
+#sidebar > ul > li > a
+{
+  color:#2883DE;
 }
 
 #sidebar li:hover > a, #sidebar li.current-menu > a
@@ -57,9 +62,4 @@ content: url('/images/arrow_bullet_dark.png');
 #sidebar > ul > li
 {
   border-bottom: 1px solid #eee;
-}
-
-#sidebar > ul >li > a
-{
-  color:#2883DE;
 }

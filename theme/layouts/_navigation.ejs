@@ -5,7 +5,7 @@ subPages = site.getSubPages;
 const navigation = [];
 for (const menuItem of site.menuItems) {
   const page = query(({originalPathname}) => originalPathname === menuItem)[0];
-  navigation.push(subPages(page));
+  navigation.push(subPages(JSON.parse(JSON.stringify(page))));
 }
 %>
 

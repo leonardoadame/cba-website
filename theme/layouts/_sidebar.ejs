@@ -3,14 +3,34 @@ const query = site.queryPages;
 const [currentPage] = query(({pathname}) => page.pathname === pathname);
 const currenOriginalPath = currentPage.originalPathname;
 
+function excludeOtherSubItems (navPage) {
+  for (const {originalPathname, sub_items} of navPage) {
+    if(sub_items) {
+      originalPathnameLength = originalPathname.split("/").length
+      currentLevelOriginalPath = currenOriginalPath.split("/")
+      .slice(0, originalPathnameLength).join("/")
+      if (currentLevelOriginalPath == originalPathname) {
+        excludeOtherSubItems(sub_items);
+      } else {
+        delete sub_items;
+      }
+    }
+    
+  }
+}
+
 const navigation = [];
 for (const menuItem of site.menuItems) {
   let otherPage = query(({originalPathname}) => originalPathname === menuItem)[0];
   if (menuItem === currenOriginalPath.split("/")[0]) {
-    otherPage = site.getSubPages(otherPage);
+    otherPage = site.getSubPages(JSON.parse(JSON.stringify(otherPage))); 
+    if (otherPage.sub_items) {
+      excludeOtherSubItems(otherPage.sub_items);
+    }
   }
   navigation.push(otherPage);
 }
+
   function recNav(navig) { %>
     <ul>
       <% for (const {title, pathname, originalPathname, sub_items} of navig) { %>
@@ -26,3 +46,4 @@ for (const menuItem of site.menuItems) {
     </ul>
   <% }
   recNav(navigation) %>
+  
