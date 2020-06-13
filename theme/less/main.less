@@ -4,15 +4,21 @@
 
 body
 {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
   font-family: "PT Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-top: 15px solid #375199;
-  width: 1000px;
   margin: 0 auto;
+  padding: 15px 300px;
 }
 
 header
 {
-  padding: 15px;
+  grid-area: header;
 }
 
 header > p
@@ -44,14 +50,8 @@ header h1 a:hover
 
 main
 { 
-  display: flex;
-  justify-content: space-between;
+  grid-area: main;
   padding: 15px 0;
-}
-
-article
-{
-  flex-grow: 3;
 }
 
 #breadcrumb
@@ -82,4 +82,8 @@ article
   list-style: none;
   padding: 5px 5px 5px 10px;
   margin: 0;
+}
+
+footer {
+  grid-area: footer;
 }
