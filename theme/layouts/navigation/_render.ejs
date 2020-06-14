@@ -2,9 +2,9 @@
 const query = site.queryPages;
 const [currentPage] = query(({pathname}) => page.pathname === pathname);
 const currenOriginalPath = currentPage.originalPathname;
-function renderNavigation(navigationData) { %>
+function renderNavigation(pages) { %>
   <ul>
-    <% for (const {title, pathname, originalPathname, sub_pages} of navigationData) {
+    <% for (const {title, pathname, originalPathname, sub_pages} of pages) {
       let classList = [];
       if (currenOriginalPath == originalPathname)
         classList.push("current-menu");
@@ -24,4 +24,4 @@ function renderNavigation(navigationData) { %>
     <% } %>
   </ul>
 <% }
-renderNavigation(navigationData) %>
+renderNavigation(navigationPages) %>
