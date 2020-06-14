@@ -1,0 +1,22 @@
+<%
+const query = site.queryPages;
+const subPages = site.getSubPages;
+
+const navigationPages = [];
+for (const menuItem of site.menuItems) {
+  const page = query(({originalPathname}) => originalPathname === menuItem)[0];
+  navigationPages.push(subPages(page));
+}
+%>
+
+<nav id="main-navigation">
+  <%- include('navigation/_render', {navigationPages}) %>
+</nav>
+
+<nav id="mobile-nav">
+<select>
+   <% for ({title, link, sub_items} of navigationPages) { %>
+      <option value="<%- link %>"><%- title %></option>
+    <% } %>
+</select>
+</nav>
