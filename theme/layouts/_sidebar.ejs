@@ -3,47 +3,14 @@ const query = site.queryPages;
 const [currentPage] = query(({pathname}) => page.pathname === pathname);
 const currenOriginalPath = currentPage.originalPathname;
 
-function excludeOtherSubItems (navPage) {
-  for (const {originalPathname, sub_items} of navPage) {
-    if(sub_items) {
-      originalPathnameLength = originalPathname.split("/").length
-      currentLevelOriginalPath = currenOriginalPath.split("/")
-      .slice(0, originalPathnameLength).join("/")
-      if (currentLevelOriginalPath == originalPathname) {
-        excludeOtherSubItems(sub_items);
-      } else {
-        delete sub_items;
-      }
-    }
-    
-  }
-}
-
 const navigation = [];
 for (const menuItem of site.menuItems) {
-  let otherPage = query(({originalPathname}) => originalPathname === menuItem)[0];
+  let topPage = query(({originalPathname}) => originalPathname === menuItem)[0];
   if (menuItem === currenOriginalPath.split("/")[0]) {
-    otherPage = site.getSubPages(JSON.parse(JSON.stringify(otherPage))); 
-    if (otherPage.sub_items) {
-      excludeOtherSubItems(otherPage.sub_items);
-    }
+    topPage = site.getSubPages(JSON.parse(JSON.stringify(topPage)), ({originalPathname}) => currenOriginalPath.startsWith(originalPathname));
   }
-  navigation.push(otherPage);
+  navigation.push(topPage);
 }
+%>
 
-  function recNav(navig) { %>
-    <ul>
-      <% for (const {title, pathname, originalPathname, sub_items} of navig) { %>
-        <li <%- currenOriginalPath == originalPathname &&
-          currenOriginalPath.split("/").length == 1  ? "class='current-menu'" : "" %>>
-          <a href="/<%= pathname %>"><%= title %></a>
-            <%
-              if (sub_items) {
-                recNav(sub_items);
-            } %>
-        </li>
-      <% } %>
-    </ul>
-  <% }
-  recNav(navigation) %>
-  
+<%- include('_renderNavigation', {navigationData: navigation}) %>

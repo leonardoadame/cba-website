@@ -1,0 +1,27 @@
+<%
+const query = site.queryPages;
+const [currentPage] = query(({pathname}) => page.pathname === pathname);
+const currenOriginalPath = currentPage.originalPathname;
+function renderNavigation(navigationData) { %>
+  <ul>
+    <% for (const {title, pathname, originalPathname, sub_pages} of navigationData) {
+      let classList = [];
+      if (currenOriginalPath == originalPathname)
+        classList.push("current-menu");
+      if (sub_pages)
+        classList.push("has-children"); %>
+      <% if (classList.length) { %>
+        <li class="<%- classList.join(" ") %>">
+      <% } else { %>
+        <li>
+      <% } %>
+        <a href="/<%= pathname %>"><%= title %></a>
+          <%
+            if (sub_pages) {
+              renderNavigation(sub_pages);
+          } %>
+      </li>
+    <% } %>
+  </ul>
+<% }
+renderNavigation(navigationData) %>
