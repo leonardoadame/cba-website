@@ -98,3 +98,22 @@ footer
   text-align: center;
   font-size: 15px;
 }
+
+@media screen and (max-width: 770px)
+{
+  body
+  {
+    padding: 30px 60px;
+    grid-template-areas: 
+    "header header"
+    "sidebar sidebar"
+    "main main"
+    "footer footer";
+  }
+
+  #breadcrumb
+  {
+    display: none;
+  }
+  
+}
