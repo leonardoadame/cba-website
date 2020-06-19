@@ -4,8 +4,9 @@
     <% include _head %>
   </head>
   <body>
+    <div>
     <header>
-      <h1><a href="#"><%= site.title %></a></h1>
+      <h1><a href="\"><%= site.title %></a></h1>
       <p><%= site.subtitle %></p>
       <% include navigation/_main %>
     </header>
@@ -22,6 +23,7 @@
         <%- page.body %>
       </article>
     </main>
+  </div>
   </body>
   <footer>
     <% include _footer %>

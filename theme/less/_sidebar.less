@@ -39,17 +39,22 @@
   color:#2883DE;
 }
 
-#sidebar li:hover > a, #sidebar li.current-menu > a
+#sidebar a:hover, #sidebar .current-menu > a
 {
   color: #333333;
 }
 
-#sidebar > ul > li:before
+#sidebar a::before
+{
+  padding-right: 7px;
+}
+
+#sidebar > ul > li > a:before
 {
   content: url('/images/arrow_bullet.png');
 }
 
-#sidebar > ul > li:hover:before, #sidebar li.current-menu:before
+#sidebar > ul > li > a:hover:before
 {
 content: url('/images/arrow_bullet_dark.png');
 }
