@@ -44,6 +44,7 @@
 {
   display: block;
   padding: 15px;
+  text-decoration: none;
 }
 
 #main-navigation > ul ul
@@ -104,19 +105,24 @@
 
 // Mobile navigation menu
 
-#mobile-nav select
+#mobile-nav
 {
   display: none;
 }
 
 @media screen and (max-width: 770px)
 {
-  #mobile-nav select
+  #mobile-nav
   {
     display: block;
+  }
+
+  #mobile-nav select
+  {
     width: 100%;
     padding: 5px;
   }
+  
   #main-navigation
   {
     display:none;

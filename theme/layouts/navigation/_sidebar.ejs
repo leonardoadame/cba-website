@@ -1,0 +1,17 @@
+<%
+const query = site.queryPages;
+const [currentPage] = query(({pathname}) => page.pathname === pathname);
+const currenPath = currentPage.originalPathname;
+
+const navigationPages = [];
+const filter = ({originalPathname}) => currenPath.startsWith(originalPathname);
+for (const menuItem of site.menuItems) {
+  let topPage = query(({originalPathname}) => originalPathname === menuItem)[0];
+  if (menuItem === currenPath.split("/")[0]) {
+    topPage = site.getSubPages(topPage, filter);
+  }
+  navigationPages.push(topPage);
+}
+%>
+
+<%- include('navigation/_render', {navigationPages}) %>

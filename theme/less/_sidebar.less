@@ -1,0 +1,65 @@
+#sidebar
+{
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 45px 0px 0px;
+  white-space: nowrap;
+  grid-area: sidebar;
+}
+
+#sidebar h2
+{
+  margin: 0;
+}
+
+#sidebar li
+{
+  list-style: none;
+  line-height: 2.5;
+}
+
+#sidebar > ul, #sidebar > ul ul
+{
+  padding: 0 10px;
+}
+
+#sidebar ul ul ul
+{
+  padding: 0 25px;
+}
+
+#sidebar a
+{
+  text-decoration: none;
+  color: #666666;
+}
+
+#sidebar > ul > li > a
+{
+  color:#2883DE;
+}
+
+#sidebar a:hover, #sidebar .current-menu > a
+{
+  color: #333333;
+}
+
+#sidebar a::before
+{
+  padding-right: 7px;
+}
+
+#sidebar > ul > li > a:before
+{
+  content: url('/images/arrow_bullet.png');
+}
+
+#sidebar > ul > li > a:hover:before
+{
+content: url('/images/arrow_bullet_dark.png');
+}
+
+#sidebar > ul > li
+{
+  border-bottom: 1px solid #eee;
+}

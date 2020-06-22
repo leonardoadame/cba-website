@@ -1,0 +1,46 @@
+<%
+const query = site.queryPages;
+const [currentPage] = query(({pathname}) => page.pathname === pathname);
+const currenOriginalPath = currentPage.originalPathname;
+
+function excludeOtherSubItems (navPage) {
+  for (const item of navPage) {
+    if (item.sub_items) {
+      const originalPathnameLength = item.originalPathname.split("/").length;
+      const currentLevelPath = currenOriginalPath.split("/").slice(0, originalPathnameLength).join("/");
+      if (currentLevelPath == item.originalPathname) {
+        excludeOtherSubItems(item.sub_items);
+      } else {
+        delete item.sub_items;
+      }
+    }
+  }
+}
+
+const navigation = [];
+for (const menuItem of site.menuItems) {
+  let otherPage = query(({originalPathname}) => originalPathname === menuItem)[0];
+  if (menuItem === currenOriginalPath.split("/")[0]) {
+    otherPage = site.getSubPages(JSON.parse(JSON.stringify(otherPage))); 
+    if (otherPage.sub_items) {
+    excludeOtherSubItems(otherPage.sub_items);
+    }
+  }
+  navigation.push(otherPage);
+}
+
+  function recNav(navig) { %>
+    <ul>
+      <% for (const {title, pathname, originalPathname, sub_items} of navig) { %>
+        <li <%- currenOriginalPath == originalPathname &&
+          currenOriginalPath.split("/").length == 1  ? "class='current-menu'" : "" %>>
+          <a href="/<%= pathname %>"><%= title %></a>
+            <%
+              if (sub_items) {
+                recNav(sub_items);
+            } %>
+        </li>
+      <% } %>
+    </ul>
+  <% }
+  recNav(navigation) %>

@@ -27,6 +27,41 @@ const templateData =
         `<li><a href = '${item.pathname}'>${item.title}</a></li>`);
 
       return `<ul>${items.join("")}</ul>`;
+    },
+    /**
+     * Get subpages according to the pages folder structure.
+     * @param {Object} page     Page instance from site.queryPages
+     * @param {Function} filter filter pages that should include subpages
+     * @return {Object} returns passed pages object with populated `sub_pages`
+     *                          properties sorted according to page weights
+     */
+    getSubPages: function (page, filter)
+    {
+      const query = templateData.site.queryPages;
+      const subPages = query(({originalPathname}) =>
+      {
+        const parentPath = `${page.originalPathname}/`;
+        return originalPathname.startsWith(parentPath) &&
+               !(originalPathname.substring(parentPath.length).includes("/"));
+      });
+
+      if (subPages.length)
+      {
+        page.sub_pages = [];
+        for (const subPage of subPages)
+        {
+          if (subPage.menu !== false)
+          {
+            page.sub_pages.push(subPage);
+            if (!filter || filter(subPage))
+            {
+              templateData.site.getSubPages(subPage, filter);
+            }
+          }
+        }
+        page.sub_pages.sort(templateData.site.sortByWeight);
+      }
+      return page;
     }
   }
 };
