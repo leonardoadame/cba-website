@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include _head %>
+  </head>
+  <body>
+    <div class="homepage">
+      <header>
+        <h1><a href="\"><%= site.title %></a></h1>
+        <p><%= site.subtitle %></p>
+        <% include navigation/_main %>
+      </header>
+      <main>
+        <article>
+          <%- page.body %>
+        </article>
+      </main>
+  </div>
+  </body>
+  <footer>
+    <% include _footer %>
+  </footer>
+</html>

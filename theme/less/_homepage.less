@@ -1,0 +1,59 @@
+.homepage
+{
+  grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+.homepage main article
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(346px, 1fr));
+}
+
+.box
+{
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  padding: 10px 10px 20px 10px;
+  margin: 20px 20px 0 0;
+}
+
+.box img 
+{
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+.box h3 
+{
+  margin: 0;
+}
+
+.box a
+{
+  text-decoration: none;
+  float: right;
+  background: linear-gradient(#ffffff, #ececec);
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.box a:hover
+{
+  cursor: pointer;
+  background: linear-gradient(#d1d1d1, #fcfcfc);
+}
+
+.box a:active
+{
+  box-shadow: inset 0 0 8px 4px #d4d4d4;
+}
+
+.box a:visited
+{
+  color: inherit;
+}
