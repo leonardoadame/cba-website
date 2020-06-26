@@ -3,26 +3,34 @@ layout: homepage
 title: Homepage
 ---
 
-![](/images/Manvel_440x280_border.jpg)
+<article>
 
-1. CBA gives ability to automate chrome browser.
-1. Ability to setup step-by-step code injections from Extensions popup interface.
-1. Ability to Record interactions in the chrome browser and playing them.
-1. Projects saving in browser's local storage.
-1. Step by step code injection.
-1. Ability of projects import and export.
-1. Ability of using CBA ready functions.
-1. Ability to write your own code that will have access to web page's DOM.
-1. And much much more...
+<h2 class="first">CBA is an extension for chrome browser automation</h2>
 
-<section class="box">
+<img src="/images/Manvel_440x280_border.jpg" alt="CBA-banner">
+
+<ol>
+<li>CBA gives ability to automate chrome browser.</li>
+<li>Ability to setup step-by-step code injections from Extensions popup interface.</li>
+<li>Ability to Record interactions in the chrome browser and playing them.</li>
+<li>Projects saving in browser&#39;s local storage.</li>
+<li>Step by step code injection.</li>
+<li>Ability of projects import and export.</li>
+<li>Ability of using CBA ready functions.</li>
+<li>Ability to write your own code that will have access to web page&#39;s DOM.</li>
+<li>And much much more...</li>
+</ol>
+
+<section class="box first">
   <h3>Install</h3>
   <p><img src="/images/arrow.png">Get chromium browser automation from google web store.</p>
-  <a href="https://chrome.google.com/webstore/detail/jmbmjnojfkcohdpkpjmeeijckfbebbon?utm_source=chrome-ntp-icon" target="_blank">CBA in chrome web store</a>
+  <a href="https://chrome.google.com/webstore/detail/jmbmjnojfkcohdpkpjmeeijckfbebbon" target="_blank">CBA in chrome web store</a>
 </section>
 
-<section class="box">
+<section class="box second">
   <h3>Documentation</h3>
   <p><img src="/images/doc_grey50.png">Learn more about how CBA works.</p>
   <a href="/documentation">Documentation</a>
 </section>
+
+</article>
