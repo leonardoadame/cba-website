@@ -4,7 +4,7 @@ const [currentPage] = query(({pathname}) => page.pathname === pathname);
 const currenOriginalPath = currentPage.originalPathname;
 function renderNavigation(pages) { %>
   <ul>
-    <% for (const {title, pathname, originalPathname, sub_pages} of pages) {
+    <% for (const {title, menu, pathname, originalPathname, sub_pages} of pages) {
       let classList = [];
       if (currenOriginalPath == originalPathname)
         classList.push("current-menu");
@@ -15,7 +15,7 @@ function renderNavigation(pages) { %>
       <% } else { %>
         <li>
       <% } %>
-        <a href="/<%= pathname %>"><%= title %></a>
+        <a href="/<%= pathname %>"><%= menu ? menu : title %></a>
           <%
             if (sub_pages) {
               renderNavigation(sub_pages);

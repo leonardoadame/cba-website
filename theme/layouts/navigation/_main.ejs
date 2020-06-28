@@ -15,8 +15,8 @@ for (const menuItem of site.menuItems) {
 
 <nav id="mobile-nav">
 <select>
-   <% for ({title, pathname, sub_items} of navigationPages) { %>
-      <option value="<%- pathname %>"><%- title %></option>
+   <% for ({title, menu, pathname, sub_items} of navigationPages) { %>
+      <option value="<%- pathname %>"><%- menu ? menu : title %></option>
     <% } %>
 </select>
 </nav>

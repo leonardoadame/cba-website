@@ -6,12 +6,23 @@
   <body class="homepage">
     <div>
       <header>
-        <h1><a href="\"><%= site.title %></a></h1>
-        <p><%= site.subtitle %></p>
+        <h1>
+          <a href="\">
+            <%= site.title %>
+          </a>
+        </h1>
+        <p>
+          <%= site.subtitle %>
+        </p>
         <% include navigation/_main %>
       </header>
       <main>
-          <%- page.body %>
+        <article>
+        <h1>
+          <%= page.title %>
+        </h1>
+        <%- page.body %>
+      </article>
       </main>
   </div>
   </body>

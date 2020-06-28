@@ -6,12 +6,20 @@
   <body>
     <div>
     <header>
-      <h1><a href="\"><%= site.title %></a></h1>
-      <p><%= site.subtitle %></p>
+      <h1>
+        <a href="\">
+          <%= site.title %>
+        </a>
+      </h1>
+      <p>
+        <%= site.subtitle %>
+      </p>
       <% include navigation/_main %>
     </header>
     <nav id="sidebar">
-      <h2>Main menu</h2>
+      <h2>
+        Main menu
+      </h2>
       <%- include navigation/_sidebar %>
     </nav>
     <main>
@@ -19,7 +27,9 @@
         <% include _breadcrumbs %>
       </nav>
       <article>
-        <h1><%= page.title %></h1>
+        <h1>
+          <%= page.title %>
+        </h1>
         <%- page.body %>
       </article>
     </main>
