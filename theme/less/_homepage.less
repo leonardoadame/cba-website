@@ -1,4 +1,4 @@
-.homepage div
+body div
 {
   grid-template-areas: 
     "header header"
@@ -6,13 +6,14 @@
     "footer footer";
 }
 
-.homepage main article
+main article
 {
   display: grid;
   grid-template-columns: auto auto;
+  column-gap: 20px;
 }
 
-.homepage main article > :first-child
+main article > *:first-child
 {
   grid-column: 1 e("/") 3;
 }
@@ -25,11 +26,7 @@
   border: 1px solid #dcdcdc;
   padding: 10px 10px 60px 10px;
   margin: 20px 0 0 0;
-}
-
-.box:first-of-type
-{
-  margin: 20px 20px 0 0;
+  z-index: -1;
 }
 
 .box img 
@@ -73,23 +70,13 @@
 
 @media screen and (max-width: 770px) 
 {
-  .homepage main article
+  main article
   {
     grid-template-columns: auto;
   }
 
-  .homepage main article > :first-child
+  main article > :first-child
   {
     grid-column: 1;
-  }
-
-  .homepage main article > img
-  {
-    margin: 0 auto;
-  }
-
-  .box:first-of-type
-  {
-    margin: 20px 0 0 0;
   }
 }

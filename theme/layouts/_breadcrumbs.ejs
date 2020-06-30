@@ -7,11 +7,11 @@ const query = site.queryPages;
     <% 
     for (let i=0; i < pathnameParts.length; i++) {
       const pickOriginalPathname = pathnameParts.slice(0, i).join("/");
-      const [{pathname, title}] = query(({originalPathname}) => 
+      const [{pathname, title, menu}] = query(({originalPathname}) => 
         originalPathname == pickOriginalPathname); %>
         <li>
-        <a href="/<%= pathname %>"><%= title %></a>
+        <a href="/<%= pathname %>"><%= menu ? menu : title %></a>
         </li>
     <% } %>
-    <li aria-current="page"><%= currentPage.title %></li>
+    <li aria-current="page"><%= currentPage.menu ? currentPage.menu : currentPage.title %></li>
   </ol>
