@@ -1,5 +1,7 @@
 node_modules
 public/css/main.css
+public/css/content.css
 public/js/main.js
 package-lock.json
 .vscode
+public/css/homepage.css
