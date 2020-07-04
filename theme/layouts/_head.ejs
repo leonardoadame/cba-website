@@ -18,7 +18,11 @@
 
 <!-- Resources -->
 <script src="<%= site.root %>/js/main.js" defer></script>
-<link href="<%= site.root %>/css/main.css" rel="stylesheet">
+<% if (page.layout == "homepage") { %>
+  <link href="<%= site.root %>/css/homepage.css" rel="stylesheet">
+<% } else { %>
+  <link href="<%= site.root %>/css/main.css" rel="stylesheet">
+<% } %>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="<%= site.root %>/images/favicon.png">
+<link rel="shortcut icon" href="<%= site.root %>/images/favicon.ico">

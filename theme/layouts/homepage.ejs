@@ -6,23 +6,14 @@
   <body>
     <div>
       <% include _header %>
-    <nav id="sidebar">
-      <h2>
-        Main menu
-      </h2>
-      <%- include navigation/_sidebar %>
-    </nav>
-    <main>
-      <nav aria-label="Breadcrumb" id="breadcrumb">
-        <% include _breadcrumbs %>
-      </nav>
-      <article>
+      <main>
+        <article>
         <h1>
           <%= page.title %>
         </h1>
         <%- page.body %>
       </article>
-    </main>
+      </main>
   </div>
   </body>
   <footer>
