@@ -14,7 +14,7 @@ Tips:
 - Stop project workflow when using asynchronous functions using sendBgInstruction variable "sendBgInstruction = false;"
 - Don't forget to continue the project workflow after stoping it `sendInstruction();`
 - use clipboard object for message passing `clipboard["myKey"] = value`
-- Jump to another action "actionToPlay(num);"
+- Jump to another action `actionToPlay(num);`
 
 Example:
 ```
