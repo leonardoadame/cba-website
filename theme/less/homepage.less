@@ -20,6 +20,15 @@ main article
   column-gap: 20px;
 }
 
+main article ol
+{
+  margin-top: 0;
+}
+main article h1
+{
+  margin: 6px 0 6px 0;
+}
+
 main article > *:first-child
 {
   grid-column: 1 e("/") 3;
@@ -32,7 +41,7 @@ main article > *:first-child
   border-radius: 8px;
   border: 1px solid #dcdcdc;
   padding: 10px 10px 60px 10px;
-  margin: 20px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 .box img 
@@ -85,4 +94,20 @@ main article > *:first-child
   {
     grid-column: 1;
   }
+  
+  .box:nth-of-type(2)
+  {
+    margin-top: 15px;
+  }
+
+  main article ol
+  {
+    margin-top: 15px;
+  }
+
+  main article h1
+  {
+    line-height: 38px;
+    margin-top: 16px
+  }  
 }

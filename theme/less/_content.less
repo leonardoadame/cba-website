@@ -16,28 +16,47 @@ article p:first-of-type img
   margin-top: 1em;
 }
 
+article p
+{
+  margin: 0.5em 0 0 0;
+}
+
+article p + ul
+{
+  margin-top: 0.3em;
+}
+
+article h3 + ul
+{
+  margin-top: 0.5em;
+}
+
 article h1
 {
   font-size: 2.19em;
   line-height: 1.4em;
+  margin: 0.3em 0 0 0;
 }
 
 article h2
 {
   font-size: 1.75em;
   line-height: 1.3em;
+  margin: 0.5em 0 0 0;
 }
 
 article h3
 {
   font-size: 1.4em;
   line-height: 1.2em;
+  margin: 0.5em 0 0 0;
 }
 
 article h4
 {
   font-size: 1.12em;
   line-height: 1.1;
+  margin: 0.5em 0 0 0;
 }
 
 article a, article a:visited
@@ -45,18 +64,24 @@ article a, article a:visited
   color: #2883DE;
 }
 
-article a:hover, article a:visited:hover
+article a:hover
 {
   color:#000000;
   text-decoration: none;
 }
 
-article a:focus, article a:visited:focus
+article a:focus
 {
   color:#000000;
 }
 
 article code
 {
+  background-color: #f0f0f0;
+}
+
+article pre
+{
+  padding: 0.7em 1.1em 0.7em 1.1em;
   background-color: #f0f0f0;
 }
