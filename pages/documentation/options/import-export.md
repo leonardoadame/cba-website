@@ -1,7 +1,7 @@
 ---
 title: Import-export
 permalink: importexport
-weight: 3
+weight: 1
 ---
 
 In this section user can export and import already created projects or groups.

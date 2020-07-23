@@ -1,5 +1,6 @@
 ---
 title: Clear cookies
+permalink: clear-cookies-func
 ---
 
 ### Action:

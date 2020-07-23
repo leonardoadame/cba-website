@@ -1,5 +1,5 @@
 ---
-title: inject
+title: Inject
 permalink: inject
 weight: 1
 ---
