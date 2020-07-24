@@ -8,4 +8,4 @@ In this section you could find ready functions that you can add to functions tab
 
 CBA functions:
 
-- [Clear cookies](/documentation/functions/clear-cookies)
+- [Clear cookies](/clear-cookies-func)
