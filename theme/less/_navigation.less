@@ -3,6 +3,7 @@
 #main-navigation 
 {
   background: linear-gradient(#fcfcfc, #ececec);
+  border-color: #EAEAEA #F5F5F5 #F5F5F5 #F5F5F5;
 }
 
 #main-navigation > ul
@@ -34,6 +35,7 @@
 #main-navigation ul ul li
 {
   width: 230px;
+  font-size: 14px;
 }
 
 #main-navigation > ul > li:hover
@@ -69,7 +71,7 @@
 #main-navigation ul ul a
 {
   display: block;
-  padding: 7px 12px;
+  padding: 10px;
   text-decoration: none;
   color: #595959;
 }
@@ -77,7 +79,7 @@
 #main-navigation > ul > li > a
 { 
   display: block;
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
@@ -93,13 +95,16 @@
 #main-navigation li.has-children > a:after
 {
   content: url('/images/arrow_bullet.png');
-  padding-left: 10px;
+  padding-left: 11px;
+  vertical-align: sub;
 }
 
-#main-navigation ul ul li.has-children > a:after
+#main-navigation ul ul li.has-children a:after
 {
   position: absolute;
   right: 10px;
+  top: 33%;
+  padding-right: 10px;
 }
 
 #main-navigation li.has-children:hover > a:after
@@ -107,6 +112,16 @@
   content: url('/images/arrow_bullet_dark.png');
 }
 
+
+#main-navigation .current-menu
+{
+  background-color: #ffffff;
+}
+
+#main-navigation .current-menu a
+{
+  color: #333333;
+}
 
 // Mobile navigation menu
 
