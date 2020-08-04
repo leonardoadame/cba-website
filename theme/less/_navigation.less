@@ -3,7 +3,6 @@
 #main-navigation 
 {
   background: linear-gradient(#fcfcfc, #ececec);
-  border-color: #EAEAEA #F5F5F5 #F5F5F5 #F5F5F5;
 }
 
 #main-navigation > ul
@@ -87,6 +86,16 @@
   text-shadow: 1px 1px 0px #fff;
 }
 
+#main-navigation .current-menu
+{
+  background-color: #ffffff;
+}
+
+#main-navigation .current-menu a
+{
+  color: #333333;
+}
+
 #main-navigation > ul > li:hover > a
 {
   color: #545454;
@@ -110,17 +119,6 @@
 #main-navigation li.has-children:hover > a:after
 {
   content: url('/images/arrow_bullet_dark.png');
-}
-
-
-#main-navigation .current-menu
-{
-  background-color: #ffffff;
-}
-
-#main-navigation .current-menu a
-{
-  color: #333333;
 }
 
 // Mobile navigation menu
