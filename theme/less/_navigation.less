@@ -69,7 +69,8 @@
 
 #main-navigation ul ul a
 {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
   text-decoration: none;
   color: #595959;
@@ -78,13 +79,18 @@
 #main-navigation > ul > li > a
 { 
   display: block;
-  padding: 15px 15px 15px 25px;
+  padding: 15px 25px 15px 25px;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   color:#2883DE;
   text-shadow: 1px 1px 0px #fff;
 }
+
+#main-navigation > ul > li.has-children > a
+{
+  padding: 15px 15px 15px 25px;
+} 
 
 #main-navigation .current-menu
 {
@@ -104,16 +110,14 @@
 #main-navigation li.has-children > a:after
 {
   content: url('/images/arrow_bullet.png');
-  padding-left: 11px;
-  vertical-align: sub;
+  padding: 0 0 0 11px;
+  vertical-align: middle;
 }
 
 #main-navigation ul ul li.has-children a:after
 {
-  position: absolute;
-  right: 10px;
-  top: 33%;
-  padding-right: 10px;
+  line-height: 22px;
+  padding: 0 13px 0 0;
 }
 
 #main-navigation li.has-children:hover > a:after
