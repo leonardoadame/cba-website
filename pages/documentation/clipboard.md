@@ -7,6 +7,7 @@ weight: 6
 "Clipboard" variable is an object that holds your data during chrome process, It's shared object between projects so you can use it even after project playback, there are several ways you can access "Clipboard" object:
 - you can access the object during script injection, please notice if you want to write data to "clipboard" object you have to be sure that you are writing also in main page's content script, as was already told in [injection documentation](/inject) inject action injects script also into all iframes of web page, so in case if you would like to write into clipboard object you have to be sure that you are writing also in main page's content script clipboard variable, you can see example of writing into "clipboard" object in image below:
 ![](/images/clipboard-inject.jpg)
+
 - you can write to the clipboard variable using clipboard function.
 - You also can access clipboard variable using <$clipboard> variable for change actions, in case if you would like to change field using data from clipboard.
 

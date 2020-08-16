@@ -18,6 +18,27 @@ main article
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+  font-size: 0.9rem;
+}
+
+main article ol
+{
+  line-height: 1.4rem;
+  align-self: center;
+}
+
+main article h1
+{
+  margin: 15px 0 0 0;
+  line-height: 38px;
+  font-weight: 300;
+  font-size: 35px;
+  color: #181818;
+}
+
+article > * 
+{
+  margin-top:15px
 }
 
 main article > *:first-child
@@ -32,13 +53,13 @@ main article > *:first-child
   border-radius: 8px;
   border: 1px solid #dcdcdc;
   padding: 10px 10px 60px 10px;
-  margin: 20px 0 0 0;
 }
 
 .box img 
 {
   float: left;
   padding: 0 15px 0 0;
+  margin: 0!important;
 }
 
 .box h3 
@@ -48,6 +69,8 @@ main article > *:first-child
 
 .box a
 {
+  font-weight: 600;
+  font-size: 13px;
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -55,7 +78,7 @@ main article > *:first-child
   background: linear-gradient(#ffffff, #ececec);
   border: 1px solid #dbdbdb;
   border-radius: 6px;
-  padding: 10px;
+  padding: 8px 13px;
 }
 
 .box a, .box a:hover, .box a:active, .box a:visited
@@ -76,6 +99,11 @@ main article > *:first-child
 
 @media screen and (max-width: 770px) 
 {
+  main article h1
+  {
+    line-height: 49px;
+  }
+  
   main article
   {
     grid-template-columns: auto;

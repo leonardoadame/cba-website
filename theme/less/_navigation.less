@@ -12,6 +12,7 @@
   border: #F5F5F5 solid  1px;
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 16px 0 10px 0;
 }
 
 #main-navigation ul
@@ -32,7 +33,8 @@
 
 #main-navigation ul ul li
 {
-  width: 250px;
+  width: 230px;
+  font-size: 14px;
 }
 
 #main-navigation > ul > li:hover
@@ -45,17 +47,10 @@
   background-color: #ffffff;
 }
 
-#main-navigation li a
-{
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-}
-
 #main-navigation > ul ul
 {
   position: absolute;
-  top: 48px;
+  top: 47px;
   left: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -74,15 +69,37 @@
 
 #main-navigation ul ul a
 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-decoration: none;
   color: #595959;
 }
 
 #main-navigation > ul > li > a
 { 
+  display: block;
+  padding: 15px 25px 15px 25px;
+  text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   color:#2883DE;
   text-shadow: 1px 1px 0px #fff;
+}
+
+#main-navigation .current-menu a
+{
+  color: #333333;
+}
+
+#main-navigation > ul > li.has-children > a
+{
+  padding: 15px 15px 15px 25px;
+}
+
+#main-navigation .current-menu
+{
+  background-color: #ffffff;
 }
 
 #main-navigation > ul > li:hover > a
@@ -93,20 +110,20 @@
 #main-navigation li.has-children > a:after
 {
   content: url('/images/arrow_bullet.png');
-  padding-left: 10px;
+  padding: 0 0 0 11px;
+  vertical-align: middle;
 }
 
-#main-navigation ul ul li.has-children > a:after
+#main-navigation ul ul li.has-children a:after
 {
-  position: absolute;
-  right: 10px;
+  padding: 0 13px;
+  height: 15px;
 }
 
 #main-navigation li.has-children:hover > a:after
 {
   content: url('/images/arrow_bullet_dark.png');
 }
-
 
 // Mobile navigation menu
 

@@ -1,6 +1,6 @@
 body
 {
-  font-family: "PT Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   border-top: 15px solid #375199;
   margin: 0;
 }
@@ -10,6 +10,20 @@ body > div
   max-width: 960px;
   margin: 0 auto;
   padding: 20px 30px;
+}
+
+@font-face 
+{
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("/fonts/SourceSans-Pro-latin/400.woff2") format("woff2");
+}
+
+@font-face 
+{
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("/fonts/SourceSans-pro-latin/600-bold.woff2") format("woff2");
 }
 
 @media screen and (max-width: 770px)

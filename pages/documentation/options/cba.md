@@ -1,7 +1,7 @@
 ---
 title: CBA
 permalink: cba-big
-weight: 1
+weight: 2
 ---
 
 The option providing bigger CBA interface where user can prepare projects without fear that popup window could be closed. 

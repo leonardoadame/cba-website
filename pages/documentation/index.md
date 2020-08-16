@@ -2,7 +2,7 @@
 title: Documentation
 ---
 
-### Overview
+## Overview
 
 CBA is automation system for chrome browser which is designed to help people with some of their daily routine work and also to provide collection of ready useful functions that will help them to solve such issues like:
 
@@ -12,7 +12,7 @@ CBA is automation system for chrome browser which is designed to help people wit
 - navigation to your favorite content
 - and much much more...
 
-### Automation creation
+## Automation creation
 
 - Create project
 - Record
