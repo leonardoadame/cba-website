@@ -1,17 +1,20 @@
 <% const title = `${site.title} | ${page.title}`%>
 <% const description = page.description %>
-<% const promo = "https://cmints.io/images/promo-alternate.png" %>
+<% const promo = "https://chrome-automation.com/images/logo.png" %>
 
 <title><%= title %></title>
 
 <!-- Meta -->
 <meta charset="UTF-8">
+<meta name="generator" content="CMintS - https://cmints.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="<%= title %>">
 <meta name="twitter:title" content="<%= title %>">
-<meta content="<%- description %>" name="description">
-<meta content="<%- description %>" property="og:description">
-<meta name="twitter:description" content="<%- description %>">
+<% if (description) { %>
+  <meta content="<%- description %>" name="description">
+  <meta content="<%- description %>" property="og:description">
+  <meta name="twitter:description" content="<%- description %>">
+<% } %>
 <meta property="og:image" content="<%= promo %>">
 <meta name="twitter:image" content="<%= promo %>">
 <meta property="og:type" content="website">
@@ -24,5 +27,9 @@
   <link href="<%= site.root %>/css/main.css" rel="stylesheet">
 <% } %>
 
+<!-- Analytics -->
+<%- include _analytics %>
+
 <!-- Favicon -->
 <link rel="shortcut icon" href="<%= site.root %>/images/favicon.ico">
+<link rel="apple-touch-icon" href="<%= site.root %>/images/logo.png">
