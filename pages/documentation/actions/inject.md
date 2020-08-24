@@ -6,7 +6,7 @@ weight: 1
 
 Injects script into web page and iframes. 
 
-![](/images/inject_site.jpg)
+![](/images/extension/actions/inject.jpg)
 
 <h2 style="color: red;">Important</h2>
 

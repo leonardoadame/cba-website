@@ -10,6 +10,6 @@ When the project workflow reaches that action, play button changes name to "resu
 
 After manual interaction you can click "resume" button and project will continue it's workflow. 
 
-![](/images/play_part.jpg) 
+![](/images/extension/resume.jpg) 
 
-![](/images/pause.jpg)
+![](/images/extension/actions/pause.jpg)
