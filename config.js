@@ -74,7 +74,7 @@ const port = {
 
 const lessOptions = {};
 const jsModuleOptions = {};
-if (argv.dev)
+if (!argv.dev)
 {
   lessOptions.sourceMap = false;
   lessOptions.minify = true;
