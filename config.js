@@ -1,3 +1,5 @@
+const argv = require("minimist")(process.argv.slice(2));
+
 const templateData =
 {
   site: {
@@ -69,4 +71,14 @@ const templateData =
 const port = {
   http: 3000
 };
-module.exports = { templateData, port };
+
+const lessOptions = {};
+const jsModuleOptions = {};
+if (argv.dev)
+{
+  lessOptions.sourceMap = false;
+  lessOptions.minify = true;
+  jsModuleOptions.minify = {sourceMap: false}
+}
+
+module.exports = { templateData, port, lessOptions, jsModuleOptions };
