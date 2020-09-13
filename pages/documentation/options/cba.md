@@ -10,4 +10,4 @@ It's actually same interface you have in popup window without project play and r
 
 While the popup can be closed in case you click outside here you can be sure that the interface will not be closed by mistake: 
 
-![](/images/extension/options/cba.png)
+![CBA tab in options page](/images/extension/options/cba.png)

@@ -6,4 +6,4 @@ weight: 7
 
 CBA uses Click action to trigger click event on DOM Element which it finds using Jquery selector.
 
-![](/images/extension/actions/click.jpg)
+![CBA click action example](/images/extension/actions/click.jpg)

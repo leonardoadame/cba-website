@@ -10,6 +10,6 @@ When the project workflow reaches that action, play button changes name to "resu
 
 After manual interaction you can click "resume" button and project will continue it's workflow. 
 
-![](/images/extension/resume.jpg) 
+![CBA resume button in popup](/images/extension/resume.jpg) 
 
-![](/images/extension/actions/pause.jpg)
+![CBA pause button in popup](/images/extension/actions/pause.jpg)
