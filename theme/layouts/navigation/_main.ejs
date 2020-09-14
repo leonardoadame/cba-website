@@ -14,7 +14,7 @@ for (const menuItem of site.menuItems) {
 </nav>
 
 <nav id="mobile-nav">
-<select>
+<select aria-label="Navigate to page">
    <% for ({title, menu, pathname, sub_items} of navigationPages) { %>
       <option value="<%- pathname %>"><%- menu ? menu : title %></option>
     <% } %>
