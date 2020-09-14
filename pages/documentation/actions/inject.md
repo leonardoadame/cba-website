@@ -6,7 +6,7 @@ weight: 1
 
 Injects script into web page and iframes. 
 
-![](/images/extension/actions/inject.jpg)
+![CBA inject action example](/images/extension/actions/inject.jpg)
 
 <h2 style="color: red;">Important</h2>
 

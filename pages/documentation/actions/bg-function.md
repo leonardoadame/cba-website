@@ -15,4 +15,4 @@ Let's look through picture example:
 ```
 as you can see `<$function=>` place holder specify the function name and `<$attr=>` placeholder specify parameters for that function if the function uses several parameters than you need to specify several `<$attr=>` placeholders. 
 
-![](/images/extension/actions/bg-function.jpg)
+![CBA bg-function action example](/images/extension/actions/bg-function.jpg)

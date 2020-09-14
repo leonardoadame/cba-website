@@ -16,4 +16,4 @@ To create CBA function you need to:
 - write script in script section
 - and choose action type
 
-![](/images/extension/options/functions.png)
+![CBA functions tab in options page](/images/extension/options/functions.png)

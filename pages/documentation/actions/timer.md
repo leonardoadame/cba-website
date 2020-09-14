@@ -6,4 +6,4 @@ weight: 10
 
 Timer action is used to stop workflow of project for mentioned period in milliseconds then continue with it. 
 
-![](/images/extension/actions/timer.jpg)
+![CBA timer action example](/images/extension/actions/timer.jpg)
