@@ -23,7 +23,8 @@
     "url": "https://github.com/Manvel/cmints-single-lang-boilerplate/issues"
   },
   "dependencies": {
-    "cmints": "^1.2.2"
+    "cmints": "^1.2.2",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
