@@ -5,11 +5,11 @@ permalink: privacy
 
 ## Analytics
 
-CBA is user centric product, CBA is only using Google Analytics to collecting
-minimal data only to understand how the product is used and find generic traffic
-pattern in chrome-automation.com website. No other data is collected and only
-used internally to understand how to improve the product. You can find summary
-of Google Analytic's data practices, as well as its privacy policy
+CBA is user centric product, CBA is using Google Analytics only to collect
+minimal data, just to understand how the product is used and find generic
+traffic pattern in chrome-automation.com website. No other data is collected and
+only used internally to understand how to improve the product. You can find
+summary of Google Analytic's data practices, as well as its privacy policy
 [here](https://support.google.com/analytics/answer/6004245).
 
 ## Permissions justification
