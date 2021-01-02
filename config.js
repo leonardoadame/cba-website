@@ -6,7 +6,7 @@ const templateData =
     title: "CBA",
     subtitle: "Chromium Browser Automation (extension for chrome browser automation)",
     menuItems: ["", "documentation", "tutorial", "ready-projects",
-      "what's-new"],
+      "releases"],
     sortByWeight: (a, b) =>
     {
       if (!a.weight)
