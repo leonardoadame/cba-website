@@ -1,5 +1,5 @@
 ---
-title: What's new
+title: Releases
 permalink: new_8
 ---
 

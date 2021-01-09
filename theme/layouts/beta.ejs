@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include _head %>
+    <link href="<%= site.root %>/css/beta.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <% include _header %>
+    <nav id="sidebar">
+      <h2>
+        Main menu
+      </h2>
+      <%- include navigation/_sidebar %>
+    </nav>
+    <main>
+      <nav aria-label="Breadcrumb" id="breadcrumb">
+        <% include _breadcrumbs %>
+      </nav>
+      <article>
+        <h1>
+          <%= page.title %>
+        </h1>
+        <%- page.body %>
+        <%
+          let num = 1;
+          while (page[`topic-${num}`])
+          {
+            const [text, image, linkText, link] = page[`topic-${num}`];
+            num++;
+        %>
+        <div class="topic">
+          <div>
+            <img src="<%- image %>" alt="">
+          </div>
+          <div>
+            <h2>
+              <a href="<%- link %>" class="button" target="_blank"><%= linkText %></a>
+            </h2>
+            <p><%- text %></p>
+          </div>
+        </div>
+      <% } %>
+      </article>
+    </main>
+  </div>
+  </body>
+  <footer>
+    <% include _footer %>
+  </footer>
+</html>
