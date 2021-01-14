@@ -31,11 +31,15 @@ topic-3:
 weight: 1
 ---
 
-CBA has been created in 2012 as a hackathon project. Since then it only had few
-changes and poor maintainability, while it was just a hobby project. After
-almost 10 years things are going to change, as the whole project has been
-rewritten in 2020, we today are starting the Beta testing phase for CBA. CBA
-won’t be a hobby project that is barely being maintained, but it will become a
-community driven project that will help it’s users become more productive and
-work smart. In order to move the project forward we need your input and wish to
-see you as one of the driving force of the new CBA.
+CBA has been created in 2012 as a hackathon project. Since 2015 it didn't have
+any major updates and poorely maintained, because the only maintainer was busy
+developing [Adblock Plus](https://adblockplus.org/). Now things are going to
+change, as the whole project has been rewritten in 2020 and more people have got
+involved in the project development. We today are starting the Beta testing
+phase for CBA. CBA will become a community driven project that will help it’s
+users become more productive and work smart. In order to move the project
+forward we need your input and wish to see you as one of the driving force of
+the new CBA.
+
+In order to help us with Beta testing phase, planing and development please
+consider helping us with the following:
