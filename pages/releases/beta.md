@@ -28,18 +28,27 @@ topic-3:
   - /images/beta/github.png
   - Bugs and code
   - https://github.com/browser-automation/cba
+new-text: What's new
+new:
+  - Complete rewrite of old monolitic and unmaintainable code.
+  - New architecture.
+  - Complete tests coverage.
+  - Actions and functions information.
+  - CBA has been open-sourced.
+  - Website has been migrated from slow Drupal instance to blazing fast <a
+    href="https://cmints.io/">CMintS</a> website.
 weight: 1
 ---
 
 CBA has been created in 2012 as a hackathon project. Since 2015 it didn't have
-any major updates and poorely maintained, because the only maintainer was busy
-developing [Adblock Plus](https://adblockplus.org/). Now things are going to
-change, as the whole project has been rewritten in 2020 and more people have got
-involved in the project development. We today are starting the Beta testing
-phase for CBA. CBA will become a community driven project that will help it’s
-users become more productive and work smart. In order to move the project
-forward we need your input and wish to see you as one of the driving force of
-the new CBA.
+any major updates and lack maintainence, because the only maintainer was busy
+developing one of the most popular extension([Adblock
+Plus](https://adblockplus.org/)). Now things are going to change, as the whole
+project has been rewritten in 2020 and more people have got involved in the
+project development. We today are starting the Beta testing phase for CBA. CBA
+will become a community driven project that will help it’s users become more
+productive and work smart. In order to move the project forward we need your
+input and wish to see you as one of the driving force of the new CBA.
 
 In order to help us with Beta testing phase, planing and development please
 consider helping us with the following:

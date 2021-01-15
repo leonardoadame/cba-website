@@ -17,9 +17,9 @@
   font-weight: 300;
 }
 
-.topic a
+article a, article a:visited
 {
-  color: #5EABBC !important;
+  color: #5EABBC;
 }
 
 .topic .button
@@ -31,4 +31,12 @@
 {
   margin: 0 20px;
   max-width: 150px;
+}
+
+@media screen and (max-width: 770px)
+{
+  .topic
+  {
+    flex-direction: column;
+  }
 }

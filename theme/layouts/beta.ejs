@@ -41,6 +41,14 @@
           </div>
         </div>
       <% } %>
+      <h2><%= page["new-text"] %></h2>
+      <% if (page.new) { %>
+        <ul>
+        <% for (const value of page.new) { %>
+        <li><%- value %></li>
+        <%}%>
+        </ul>
+      <%}%>
       </article>
     </main>
   </div>
