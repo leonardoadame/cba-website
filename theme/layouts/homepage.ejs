@@ -4,6 +4,9 @@
     <% include _head %>
   </head>
   <body>
+    <div id="notification">
+      <span><a href="/beta"><%= page.notification %></a></span>
+    </div>
     <div>
       <% include _header %>
       <main>
@@ -14,7 +17,7 @@
         <%- page.body %>
         </article>
       </main>
-  </div>
+    </div>
   </body>
   <footer>
     <% include _footer %>
