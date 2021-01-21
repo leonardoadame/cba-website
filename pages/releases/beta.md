@@ -40,9 +40,9 @@ new:
 weight: 1
 ---
 
-CBA has been created in 2012 as a hackathon project. Since 2015 it didn't have
-any major updates, because of the complicated monolith architecture and the only
-maintainer was busy developing one of the most popular extension([Adblock
+CBA has been introduced in 2012 as a hackathon project. Since 2015 it didn't
+have any major updates, because of the complicated monolith architecture and the
+only maintainer being busy developing one of the most popular extension([Adblock
 Plus](https://adblockplus.org/)). Now things are going to change, as the whole
 project has been rewritten in 2020 and more people have got involved in the
 project development. We today are starting the Beta testing phase of the CBA
