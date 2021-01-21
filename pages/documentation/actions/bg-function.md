@@ -1,5 +1,5 @@
 ---
-title: bg-function (deprecated)
+title: bg-function
 permalink: bg-function
 weight: 4
 ---

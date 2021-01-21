@@ -2,7 +2,8 @@ node_modules
 public/css/main.css
 public/css/beta.css
 public/js/main.js
-package-lock.json
-.vscode
 public/css/homepage.css
 content
+.vscode
+**/.DS_Store
+package-lock.json
