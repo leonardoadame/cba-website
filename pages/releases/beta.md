@@ -1,5 +1,5 @@
 ---
-title: Version 9.0(Beta)
+title: Beta
 description: Beta testing complete rewrite of CBA
 permalink: beta
 layout: beta
