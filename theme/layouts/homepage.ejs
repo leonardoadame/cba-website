@@ -5,7 +5,13 @@
   </head>
   <body>
     <div id="notification">
-      <span><a href="/beta"><%= page.notification %></a></span>
+      <span>
+        <%= page.notification %>
+        <a href="<%= page['notification-link'] %>">
+          <%= page["notification-link-text"] %>
+          <img src="<%= page['notification-link-image'] %>" alt="Shy emoji">
+        </a>
+      </span>
     </div>
     <div>
       <% include _header %>
