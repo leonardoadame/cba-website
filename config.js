@@ -28,4 +28,10 @@ templateData.site.listOfPages = listOfPages.bind(templateData.site);
 templateData.site.getSubPages = getSubPages.bind(templateData.site);
 templateData.site.sortByWeight = sortByWeight.bind(templateData.site);
 
-module.exports = { templateData, port, lessOptions, jsModuleOptions };
+// Set image width and height in markdown ex. - `![test](image.png =100x200)`
+const imgSize = require('markdown-it-imsize');
+const markdownOptions = {
+  plugins: [imgSize]
+}
+
+module.exports = { templateData, port, lessOptions, jsModuleOptions, markdownOptions };

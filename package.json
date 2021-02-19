@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "cmints": "^1.2.2",
+    "markdown-it-imsize": "^2.0.1",
     "minimist": "^1.2.5"
   },
   "devDependencies": {
