@@ -1,5 +1,5 @@
 ---
-title: copy-html (beta)
+title: copy-html
 permalink: copy-html
 weight: 12
 ---
