@@ -9,7 +9,7 @@ introduces completely new codebase and architectural changes:
 - Complete rewrite of the code and fully automated test coverage.
 - CBA has been [open sourced ![](/images/icons/github.png =20x)](https://github.com/browser-automation/cba)
   - [New issue tracker](https://github.com/browser-automation/cba/issues).
-- [bg-inject](/bg-inject) and [cs-inject](/cs-inject) can use
+- [bg-inject](/bg-inject) and [cs-inject](/inject-cs) can use
   [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
   - `sendInstruction()` and `sendBgInstruction = false;` helpers has been
     deprecated.
