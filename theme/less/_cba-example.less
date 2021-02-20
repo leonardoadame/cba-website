@@ -13,23 +13,15 @@ article .cba-example
   display: flex;
   flex-direction: row;
   background-color: #f0f0f0;
-  max-width: 550px;
-  position: relative;
-  z-index: 0;
+  max-width: 600px;
   &::after {
     content: "";
+    display: block;
+    height: 70px;
     background-size: contain;
     background-repeat: no-repeat;
-    display: block;
-    width: 200px;
-    height: 70px;
     margin-top: 5px;
     flex: 3;
-  }
-  pre, code
-  {
-    background: none;
-    padding: 0;
   }
   pre
   {
@@ -37,7 +29,12 @@ article .cba-example
     border: 1px solid #868686;
     padding: 5px;
     background-color: white;
-    flex: 5;
+    flex: 4;
+  }
+  code
+  {
+    background: none;
+    padding: 0;
   }
 }
 
