@@ -1,0 +1,51 @@
+/* Usage example:
+<div class="cba-example bg-function">
+
+```
+<$function=saveToClipboard>
+<$attr={"name": "value"}>
+```
+</div>
+*/
+
+article .cba-example
+{
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  max-width: 550px;
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 200px;
+    height: 70px;
+    margin-top: 5px;
+    flex: 3;
+  }
+  pre, code
+  {
+    background: none;
+    padding: 0;
+  }
+  pre
+  {
+    margin: 5px;
+    border: 1px solid #868686;
+    padding: 5px;
+    background-color: white;
+    flex: 5;
+  }
+}
+
+@actions: inject, inject-cs, bg-inject, bg-function, change, check, click,
+          click-update, update, timer, redirect, copy, copy-html, pause;
+
+each(@actions, {
+  article .cba-example.@{value}::after {
+    background-image: url("/images/extension/actions/blank/@{value}.png");
+  }
+});
