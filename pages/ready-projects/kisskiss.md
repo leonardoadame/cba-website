@@ -9,22 +9,22 @@ Aparently someone from the game community have created a script while ago which
 is no more compatible with CBA v9.0. Luckily a new script is ready to use.
 
 ## Installing new kiss kiss game automation project
-### Copy new automation code from <a href="https://chrome-automation.com/kisskiss.txt" target="_blank">chrome-automation.com/kisskiss.txt</a>
+### Step 1: Copy new automation code from <a href="https://chrome-automation.com/kisskiss.txt" target="_blank">chrome-automation.com/kisskiss.txt</a>
 
 ![](/images/ready/kisskiss/copy-script.png)
 
-## Right click CBA icon and select options
+## Step 2: Right click CBA icon and select options
 
 ![](/images/ready/kisskiss/open-options.png)
 
-## Paste script into import area
+## Step 3: Paste script into import area
 
 ![](/images/ready/kisskiss/import-paste.png)
 
-## Select "Root" and click "Import"
+## Step 4: Select "Root" and click "Import"
 
 ![](/images/ready/kisskiss/import-click.png)
 
-## Open popup, select Kiss project, set playback amount and hit play
+## Step 5: Open popup, select Kiss project, set playback amount and hit play
 
 ![](/images/ready/kisskiss/play-automation.png)
