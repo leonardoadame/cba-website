@@ -1,7 +1,9 @@
 ---
-title: Fb like unlike
+title: Fb like unlike(deprecated)
 permalink: fblikeunlike
 ---
+
+**Note:** Current script is deprecated.
 
 Hi guys here is the [ready project](/fblike.txt) for FB like and unlike beforehand it was ready function, but after Facebook made some updates it's stopped to work, so now you have this ability again just import the project use it. 
 
