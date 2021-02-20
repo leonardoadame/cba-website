@@ -9,7 +9,9 @@
         <%= page.notification %>
         <a href="<%= page['notification-link'] %>">
           <%= page["notification-link-text"] %>
-          <img src="<%= page['notification-link-image'] %>" alt="Shy emoji">
+          <% if (page["notification-link-image"]) {%>
+            <img src="<%= page['notification-link-image'] %>" alt="Shy emoji">
+          <% } %>
         </a>
       </span>
     </div>
