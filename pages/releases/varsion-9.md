@@ -16,8 +16,6 @@ introduces completely new codebase and architectural changes:
 - `submit-click` is [`click-update`](/click-update) now.
 - [copy](/copy) action copies text content of the element, while
   [copy-html](/copy-html) copies `innerHtml`.
-- [clipboard](/clipboard) is deprecated, in favor of
-  [cba.clipboard](/clipboard).
 - Information icon popup for the brief information about each action type and
   functions.
   - ![Screenshot of actions info](/images/info-actions.png =300x)
