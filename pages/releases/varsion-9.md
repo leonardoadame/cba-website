@@ -36,7 +36,7 @@ In case you really need to fallback to the v8 you can do that following
 [installing CBA 8.3.7 instructions on the current
 page](/new_8#installing-cba-8.3.7).
 
-## Having issue with automating game?
+## Having issue automating kiss-kiss game?
 
 After releasing version 9.0 a lot of CBA users have reported an automation
 script being broken which they used for automating Kiss Kiss game. Aparently
