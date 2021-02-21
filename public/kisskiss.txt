@@ -84,6 +84,21 @@
     "id": "cba-list-id-1",
     "text": "Kiss+save",
     "type": "project"
+  }, {
+    "actions": [{
+      "id": "cba-table-id-1",
+      "inputs": [".js-kiss:not(.action-button--premium)", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-2",
+      "inputs": ["2000", "Please enter the time in milliseconds"],
+      "selected": true,
+      "type": "timer"
+    }],
+    "editable": false,
+    "id": "cba-list-id-2",
+    "text": "Kiss",
+    "type": "project"
   }],
   "text": "Kiss kiss game",
   "type": "group",
