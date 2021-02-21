@@ -23,11 +23,25 @@ introduces completely new codebase and architectural changes:
 - Made action recording more reliable.
 - Bug fixes.
 
-**Note:** In case you have issue with the new version of the CBA please open an
-issue in the [Github page of the
-project](https://github.com/browser-automation/cba/issues), also do not hesitate
-contacting me at [saroyanm@gmail.com](mailto:saroyanm@gmail.com), I'm looking
-forward hearing back from you so we can together improve CBA. In case you really
-need to fallback to the v8 you can do that following [installing CBA 8.3.7
- instructions on the
-current page](/new_8#installing-cba-8.3.7).
+## Issue(s) with new version?
+
+In case you have issue with the new version do not hessitate contacting me at
+[saroyanm@gmail.com](mailto:saroyanm@gmail.com) or open an issue in the [Github
+page of the project](https://github.com/browser-automation/cba/issues). I'm
+looking forward hearing back from you so we can together improve CBA.
+
+## Need to fallback to the old verions?
+
+In case you really need to fallback to the v8 you can do that following
+[installing CBA 8.3.7 instructions on the current
+page](/new_8#installing-cba-8.3.7).
+
+## Having issue with automating game?
+
+After releasing version 9.0 a lot of CBA users have reported an automation
+script being broken which they used for automating Kiss Kiss game. Aparently
+someone from the game community have created script a while ago which is no more
+compatible with CBA v9.0. Luckily [a new script is ready to
+use](https://chrome-automation.com/kisskiss) we are still working on it, so in
+case you notice something unexpected or want to improve please do not hessitate
+contacting me at [saroyanm@gmail.com](mailto:saroyanm@gmail.com).
