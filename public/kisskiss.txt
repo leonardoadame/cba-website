@@ -9,12 +9,12 @@
     "type": "timer"
   }, {
     "id": "cba-table-id-7",
-    "inputs": [".popup__close", ""],
+    "inputs": [".popup--new-sale .popup__close", ""],
+    "selected": true,
     "type": "click"
   }, {
     "id": "cba-table-id-17",
     "inputs": [".js-kiss:not(.action-button--premium)", ""],
-    "selected": true,
     "type": "click"
   }, {
     "id": "cba-table-id-23",
@@ -41,7 +41,7 @@
     "inputs": ["1000", ""],
     "type": "timer"
   }],
-  "id": "Kiss",
+  "id": "Kiss_1",
   "text": "Kiss",
   "type": "project",
   "selected": false
