@@ -1,48 +1,91 @@
 {
-  "actions": [{
-    "id": "cba-table-id-1",
-    "inputs": [".js-start-kiss", ""],
-    "type": "click"
+  "editable": false,
+  "expanded": false,
+  "id": "group2_1",
+  "subItems": [{
+    "actions": [{
+      "id": "cba-table-id-5",
+      "inputs": ["1000", "Please enter the time in milliseconds"],
+      "type": "timer"
+    }, {
+      "id": "cba-table-id-7",
+      "inputs": [".popup--new-sale .popup__close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-8",
+      "inputs": [".popup--premium-promo .popup__close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-10",
+      "inputs": [".popup--magic-box .popup__close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-9",
+      "inputs": [".react-popup .popup__close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-17",
+      "inputs": [".js-kiss:not(.action-button--premium)", ""],
+      "selected": true,
+      "type": "click"
+    }, {
+      "id": "cba-table-id-23",
+      "inputs": [".js-save", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-1",
+      "inputs": [".js-start-kiss", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-4",
+      "inputs": [".js-close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-11",
+      "inputs": [".popup--offline .js-refresh", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-12",
+      "inputs": [".js-start", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-3",
+      "inputs": [".popup--height-extra-", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-2",
+      "inputs": [".js-popup-slider-next", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-6",
+      "inputs": [".button__close", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-18",
+      "inputs": ["1000", ""],
+      "type": "timer"
+    }],
+    "editable": false,
+    "id": "Kiss_1",
+    "text": "All",
+    "type": "project"
   }, {
-    "id": "cba-table-id-5",
-    "inputs": ["1000", "Please enter the time in milliseconds"],
-    "type": "timer"
-  }, {
-    "id": "cba-table-id-7",
-    "inputs": [".popup--new-sale .popup__close", ""],
-    "selected": true,
-    "type": "click"
-  }, {
-    "id": "cba-table-id-17",
-    "inputs": [".js-kiss:not(.action-button--premium)", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-23",
-    "inputs": [".js-save", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-4",
-    "inputs": [".js-close", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-3",
-    "inputs": [".popup--height-extra-", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-2",
-    "inputs": [".js-popup-slider-next", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-6",
-    "inputs": [".button__close", ""],
-    "type": "click"
-  }, {
-    "id": "cba-table-id-18",
-    "inputs": ["1000", ""],
-    "type": "timer"
+    "actions": [{
+      "id": "cba-table-id-3",
+      "inputs": [".js-kiss:not(.action-button--premium)", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-2",
+      "inputs": ["2000", "Please enter the time in milliseconds"],
+      "selected": true,
+      "type": "timer"
+    }],
+    "editable": false,
+    "id": "cba-list-id-1",
+    "text": "Kiss+save",
+    "type": "project"
   }],
-  "id": "Kiss_1",
-  "text": "Kiss",
-  "type": "project",
+  "text": "Kiss kiss game",
+  "type": "group",
   "selected": false
 }

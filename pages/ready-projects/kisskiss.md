@@ -28,3 +28,12 @@ is no more compatible with CBA v9.0. Luckily a new script is ready to use.
 ## Step 5: Open popup, select Kiss project, set playback amount and hit play
 
 ![](/images/ready/kisskiss/play-automation.png)
+
+## Step 6: Rate CBA so we can continue helping you
+## Step 7: Navigate to <a href="https://chrome.google.com/webstore/detail/chromium-browser-automati/jmbmjnojfkcohdpkpjmeeijckfbebbon" target="_blank">https://chrome.google.com/webstore/detail/chromium-browser-automati/jmbmjnojfkcohdpkpjmeeijckfbebbon</a>, click on Review button then "Write a review".
+
+![](/images/ready/kisskiss/rate-cba.png)
+
+## Step 8: Rate CBA so we can continue working on it and publish the rating 
+
+![](/images/ready/kisskiss/publish-rating.png)
