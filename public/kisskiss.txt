@@ -99,6 +99,28 @@
     "id": "cba-list-id-2",
     "text": "Kiss",
     "type": "project"
+  }, {
+    "actions": [{
+      "id": "cba-table-id-1",
+      "inputs": [".action-button--premium.js-kiss", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-2",
+      "inputs": [".button--kick.js-save", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-3",
+      "inputs": [".action-button--yes.js-kiss", ""],
+      "type": "click"
+    }, {
+      "id": "cba-table-id-4",
+      "inputs": ["2000", "Please enter the time in milliseconds"],
+      "type": "timer"
+    }],
+    "editable": false,
+    "id": "cba-list-id-4",
+    "text": "VIP",
+    "type": "project"
   }],
   "text": "Kiss kiss game",
   "type": "group",
