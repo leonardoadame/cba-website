@@ -9,7 +9,11 @@ Aparently someone from the game community have created a script while ago which
 is no more compatible with CBA v9.0. Luckily a new script is ready to use.
 
 ## Installing new kiss kiss game automation project
-### Step 1: Copy new automation code from <a href="https://chrome-automation.com/kisskiss.txt" target="_blank">chrome-automation.com/kisskiss.txt</a>
+### Step 1: Open new new automation code from <a href="https://chrome-automation.com/kisskiss.txt" target="_blank">chrome-automation.com/kisskiss.txt</a>
+
+#### Step 1.1: Ensure your browser doesn't translate the script's page(Choose English otherwise)
+
+#### Step 1.2: Copy the text
 
 ![](/images/ready/kisskiss/copy-script.png)
 
