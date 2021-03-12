@@ -1,5 +1,5 @@
 ---
-title: Facebook demo
+title: Facebook demo(deprecated)
 permalink: facebook-demo
 weight: 2
 ---
