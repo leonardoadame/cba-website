@@ -9,7 +9,7 @@ function listOfPages(pathname)
   pagesQuery.sort(this.sortByWeight);
 
   const items = pagesQuery.map((item) =>
-    `<li><a href = '${item.pathname}'>${item.title}</a></li>`);
+    `<li><a href = '/${item.pathname}'>${item.title}</a></li>`);
 
   return `<ul>${items.join("")}</ul>`;
 }
