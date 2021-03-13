@@ -1,13 +1,14 @@
 const argv = require("minimist")(process.argv.slice(2));
 const {getSubPages, listOfPages, sortByWeight} = require("./helpers");
+const notification = require("./notification.json");
 
 const templateData =
 {
   site: {
     title: "CBA",
     subtitle: "Chromium Browser Automation (extension for chrome browser automation)",
-    menuItems: ["", "documentation", "tutorial", "ready-projects",
-      "releases"]
+    menuItems: ["", "documentation", "tutorial", "ready-projects", "releases"],
+    notification
   }
 };
 
@@ -34,4 +35,5 @@ const markdownOptions = {
   plugins: [imgSize]
 }
 
-module.exports = { templateData, port, lessOptions, jsModuleOptions, markdownOptions };
+module.exports = { templateData, port, lessOptions, jsModuleOptions,
+  markdownOptions };

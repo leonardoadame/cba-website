@@ -5,17 +5,7 @@
   </head>
   <body>
     <% include _tag-manager %>
-    <div id="notification">
-      <span>
-        <%= page.notification %>
-        <a href="<%= page['notification-link'] %>">
-          <%= page["notification-link-text"] %>
-          <% if (page["notification-link-image"]) {%>
-            <img src="<%= page['notification-link-image'] %>" alt="Shy emoji">
-          <% } %>
-        </a>
-      </span>
-    </div>
+    <% include _notification %>
     <div>
       <% include _header %>
       <main>

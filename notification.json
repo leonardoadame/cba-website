@@ -1,0 +1,9 @@
+{
+  "disabled": false,
+  "match": "^$",
+  "text": "Chromium Browser Automation version 9.0 is out",
+  "link": {
+    "text": "What's new",
+    "href": "/new_9-0"
+  }
+}

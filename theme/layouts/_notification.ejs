@@ -1,0 +1,15 @@
+<% if (site.notification && !site.notification.disabled) { %>
+  <% const {text, link, image, match} = site.notification; %>
+  <% if (match && !(new RegExp(match).test(page.pathname))) return; %>
+  <div id="notification">
+    <span>
+      <%= text %>
+      <a href="<%= link.href %>">
+        <%= link.text %>
+        <% if (image) {%>
+          <img src="<%= image.path %>" alt="image.alt">
+        <% } %>
+      </a>
+    </span>
+  </div>
+<% } %>
