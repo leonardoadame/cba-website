@@ -2,6 +2,7 @@
 title: bg-function
 permalink: bg-function
 weight: 4
+edit: ${github-path}
 ---
 
 Because of The CSP rules that google force developers to use in the extension with manifest version 2 there is no possibility to inject code into background page, so that Why I've created new event that calls bg-function. 

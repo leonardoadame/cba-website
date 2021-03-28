@@ -2,6 +2,7 @@
 title: change
 permalink: change
 weight: 5
+edit: ${github-path}
 ---
 
 Change action mostly are used on textboxes and textareas, they are Triggering focus and change events on DOM element. 

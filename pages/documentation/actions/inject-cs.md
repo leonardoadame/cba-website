@@ -2,6 +2,7 @@
 title: inject-cs
 permalink: inject-cs
 weight: 2
+edit: ${github-path}
 ---
 
 Inject is the Action that Injects javascript code into content script during

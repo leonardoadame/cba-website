@@ -1,6 +1,7 @@
 ---
 title: Releases
 permalink: new_8
+edit: ${github-path}
 ---
 
 - New [options page](/options)

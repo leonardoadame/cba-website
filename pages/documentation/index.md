@@ -1,5 +1,6 @@
 ---
 title: Documentation
+edit: ${github-path}
 ---
 
 ## Overview

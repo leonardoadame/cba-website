@@ -2,6 +2,7 @@
 title: click-update
 permalink: click-update
 weight: 8
+edit: ${github-path}
 ---
 
 `click-update` action is similar to `click` action with the difference that

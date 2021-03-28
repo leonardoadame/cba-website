@@ -2,6 +2,7 @@
 title: Version 9.0
 permalink: new_9-0
 weight: 1
+edit: ${github-path}
 ---
 
 This is one of the biggest releases since the first version of the CBA, it

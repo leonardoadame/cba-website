@@ -2,6 +2,7 @@
 title: Import-export
 permalink: importexport
 weight: 1
+edit: ${github-path}
 ---
 
 In this section user can export and import already created projects or groups.

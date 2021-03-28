@@ -2,6 +2,7 @@
 title: bg-inject
 permalink: bg-inject
 weight: 3
+edit: ${github-path}
 ---
 
 `bg-inject` provides ability of injecting script into backroung page of the

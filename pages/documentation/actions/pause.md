@@ -2,6 +2,7 @@
 title: pause
 permalink: pause
 weight: 13
+edit: ${github-path}
 ---
 
 The action that Pause project workflow, it could be useful if you want to fill some forms manually and then continue with project workflow. 

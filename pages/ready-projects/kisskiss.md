@@ -1,6 +1,7 @@
 ---
 title: Kiss Kiss game
 permalink: kisskiss
+edit: ${github-path}
 ---
 
 After releasing [version 9.0](/new_9-0) a lot of CBA users have reported an

@@ -2,6 +2,7 @@
 title: Inject
 permalink: inject
 weight: 1
+edit: ${github-path}
 ---
 
 Injects script into web page and iframes. 

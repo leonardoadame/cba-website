@@ -1,6 +1,7 @@
 ---
 title: Fb like unlike(deprecated)
 permalink: fblikeunlike
+edit: ${github-path}
 ---
 
 **Note:** Current script is deprecated.
