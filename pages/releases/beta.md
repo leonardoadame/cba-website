@@ -39,7 +39,7 @@ new:
   - Website has been migrated from slow Drupal instance to blazing fast <a
     href="https://cmints.io/">CMintS</a> website.
 weight: 1
-edit: ${github-path}
+edit: releases/beta.md
 ---
 
 CBA has been introduced in 2012 as a hackathon project. Since 2015 it didn't

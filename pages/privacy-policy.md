@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 permalink: privacy
-edit: ${github-path}
+edit: privacy-policy.md
 ---
 
 ## Analytics

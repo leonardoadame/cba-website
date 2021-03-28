@@ -2,7 +2,7 @@
 title: CBA
 permalink: cba-big
 weight: 2
-edit: ${github-path}
+edit: documentation/options/cba.md
 ---
 
 The option providing bigger CBA interface where user can prepare projects without fear that popup window could be closed. 

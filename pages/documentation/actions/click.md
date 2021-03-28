@@ -2,7 +2,7 @@
 title: click
 permalink: click
 weight: 7
-edit: ${github-path}
+edit: documentation/actions/click.md
 ---
 
 CBA uses Click action to trigger click event on DOM Element which it finds using Jquery selector.

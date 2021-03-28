@@ -1,6 +1,6 @@
 ---
 title: Documentation
-edit: ${github-path}
+edit: documentation/index.md
 ---
 
 ## Overview

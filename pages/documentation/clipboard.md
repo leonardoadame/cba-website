@@ -2,7 +2,7 @@
 title: clipboard
 permalink: clipboard
 weight: 6
-edit: ${github-path}
+edit: documentation/clipboard.md
 ---
 
 "Clipboard" variable is an object that holds your data during chrome process,

@@ -1,7 +1,7 @@
 ---
 title: Clear cookies
 permalink: clear-cookies-func
-edit: ${github-path}
+edit: documentation/functions/clear-cookies.md
 ---
 
 ### Action:

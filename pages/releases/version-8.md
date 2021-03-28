@@ -2,7 +2,7 @@
 title: Version 8.0
 permalink: new_8
 weight: 2
-edit: ${github-path}
+edit: releases/version-8.md
 ---
 
 - New [options page](/options)

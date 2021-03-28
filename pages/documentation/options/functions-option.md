@@ -2,7 +2,7 @@
 title: Functions options
 permalink: functions-management
 weight: 3
-edit: ${github-path}
+edit: documentation/options/functions-option.md
 ---
 
 In this section you can create ready functions which you can use in functions interface - just drag and drop the function to actions table to use already ready script in the project.

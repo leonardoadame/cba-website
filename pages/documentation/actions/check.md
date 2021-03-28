@@ -2,7 +2,7 @@
 title: check
 permalink: check
 weight: 6
-edit: ${github-path}
+edit: documentation/actions/check.md
 ---
 
 check action mostly are used on radio buttons and check boxes. 

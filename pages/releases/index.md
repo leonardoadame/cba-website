@@ -1,7 +1,7 @@
 ---
 title: Releases
 permalink: new_8
-edit: ${github-path}
+edit: releases/index.md
 ---
 
 - New [options page](/options)
