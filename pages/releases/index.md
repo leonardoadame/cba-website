@@ -1,6 +1,7 @@
 ---
 title: Releases
 permalink: new_8
+edit: releases/index.md
 ---
 
 - New [options page](/options)

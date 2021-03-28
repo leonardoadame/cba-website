@@ -1,6 +1,7 @@
 ---
 title: Fb like unlike(deprecated)
 permalink: fblikeunlike
+edit: ready-projects/fb-like-unlike.md
 ---
 
 **Note:** Current script is deprecated.

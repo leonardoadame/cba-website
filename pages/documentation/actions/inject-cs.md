@@ -2,6 +2,7 @@
 title: inject-cs
 permalink: inject-cs
 weight: 2
+edit: documentation/actions/inject-cs.md
 ---
 
 Inject is the Action that Injects javascript code into content script during

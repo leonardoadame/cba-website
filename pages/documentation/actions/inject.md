@@ -2,6 +2,7 @@
 title: Inject
 permalink: inject
 weight: 1
+edit: documentation/actions/inject.md
 ---
 
 Injects script into web page and iframes. 

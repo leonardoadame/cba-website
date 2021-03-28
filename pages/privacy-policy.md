@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 permalink: privacy
+edit: privacy-policy.md
 ---
 
 ## Analytics

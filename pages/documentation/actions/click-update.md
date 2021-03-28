@@ -2,6 +2,7 @@
 title: click-update
 permalink: click-update
 weight: 8
+edit: documentation/actions/click-update.md
 ---
 
 `click-update` action is similar to `click` action with the difference that

@@ -8,6 +8,7 @@ const templateData =
     title: "CBA",
     subtitle: "Chromium Browser Automation (extension for chrome browser automation)",
     menuItems: ["", "documentation", "tutorial", "ready-projects", "releases"],
+    github: "https://github.com/browser-automation/cba-website",
     notification
   }
 };

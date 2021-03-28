@@ -2,6 +2,7 @@
 title: Play projects you trust
 permalink: powerful-actions
 menu: false
+edit: documentation/actions/powerful-actions.md
 ---
 
 ### Short

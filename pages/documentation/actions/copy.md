@@ -2,6 +2,7 @@
 title: copy
 permalink: copy
 weight: 12
+edit: documentation/actions/copy.md
 ---
 
 Copy action uses the CSS selector to get text content of the element and save it

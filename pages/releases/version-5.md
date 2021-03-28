@@ -2,6 +2,7 @@
 title: Version 5.0
 permalink: new_5
 weight: 5
+edit: releases/version-5.md
 ---
 
 - Updated manifest version to v2

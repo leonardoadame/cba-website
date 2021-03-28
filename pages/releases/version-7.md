@@ -1,6 +1,7 @@
 ---
 title: Version 7.0
 weight: 3
+edit: releases/version-7.md
 ---
 
 - [Implemented new clipboard object that holds data during chrome process](/clipboard)

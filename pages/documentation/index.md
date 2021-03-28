@@ -1,5 +1,6 @@
 ---
 title: Documentation
+edit: documentation/index.md
 ---
 
 ## Overview

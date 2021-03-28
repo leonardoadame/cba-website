@@ -1,6 +1,7 @@
 ---
 title: Clear cookies
 permalink: clear-cookies-func
+edit: documentation/functions/clear-cookies.md
 ---
 
 ### Action:
