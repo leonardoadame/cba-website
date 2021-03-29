@@ -5,8 +5,20 @@ weight: 6
 edit: documentation/actions/check.md
 ---
 
-check action mostly are used on radio buttons and check boxes. 
 
-Check action uses Jquery selector to find the Element and set checked attribute to true. 
 
-![CBA check action example](/images/extension/actions/check.jpg)
+`check` action uses [CSS
+selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to
+find relevant [radio
+button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
+or
+[checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+and update's it checked state(selects it).
+
+
+<div class="cba-example check">
+
+```
+#age
+```
+</div>

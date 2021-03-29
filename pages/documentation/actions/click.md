@@ -5,6 +5,13 @@ weight: 7
 edit: documentation/actions/click.md
 ---
 
-CBA uses Click action to trigger click event on DOM Element which it finds using Jquery selector.
+`click` action uses [CSS
+selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to
+find relevant target and triggers click on that element.
 
-![CBA click action example](/images/extension/actions/click.jpg)
+<div class="cba-example click">
+
+```
+#closePopup
+```
+</div>
