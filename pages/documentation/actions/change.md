@@ -5,20 +5,43 @@ weight: 5
 edit: documentation/actions/change.md
 ---
 
-Change action mostly are used on textboxes and textareas, they are Triggering focus and change events on DOM element. 
+Change action uses [CSS
+selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to
+find relevant user input element and changes it's content.
 
-Change action uses Jquery selector to Change the value of the DOM Element. Also users can use CBA placeholders:
+Change action can be used on
+[selectboxes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select),
+various
+textboxes([text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text),
+[email](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email)
+and more),
+[textareas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+and [contenteditable
+elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable),
+they are focusing the element, changing the value and triggerring change events. 
+
+[See website registration demo](https://www.youtube.com/watch?v=_9784gJ4uYk).
 
 ## Placeholders
 
-`<$unique=>` - Unique placeholder is generating random number (13 characters length maximum). So in the pic. example the action is used to find Dom Element with the ID of #sometextBox trigger focus event on it change the value to hello concatenated with 3 charecter length random number. 
+### unique
+
+`<$unique=>` - placeholder is generating random number (1-13 characters length)
+depending of the value. In example below the `change` action is used to find Dom
+Element with the ID of `#sometextBox` and change the value to hello concatenated
+with 3 charecter length random number (i.e. `Hello123`).
 
 ![CBA change action example using clipboard](/images/extension/actions/change.jpg)
 
-`<$clipboard=>` - Clipboard placeholder is used to access [clipboard object](clipboard) data. So now you can access any data from clipboard object for change action using current syntax: 
+### clipboard
 
-`<$clipboard=propertyName>` 
+`<$clipboard=>` - Clipboard placeholder is used to access [clipboard
+object](/clipboard) data. Which means that you can access data saved previously
+in `clipboard` object to update input value: 
 
-so this placeholder will call `clipboard["propertyName"]`. 
+`<$clipboard=name>` 
+
+so this placeholder will access value of the `name` property from the clipboard
+object(i.e. `clipboard["name"]`).:
 
 ![CBA change action example using clipboard](/images/extension/actions/clipboard/placeholder.jpg)

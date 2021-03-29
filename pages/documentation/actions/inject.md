@@ -5,11 +5,20 @@ weight: 1
 edit: documentation/actions/inject.md
 ---
 
-Injects script into web page and iframes. 
+Injects script into web page and iframes.
 
-![CBA inject action example](/images/extension/actions/inject.jpg)
+<div class="cba-example inject">
 
-<h2 style="color: red;">Important</h2>
+```
+document.body.innerHTML = "Hello world";
+```
+</div> 
 
-Starting from version 8 **inject** action is different from the one CBA used in version 7.
-In version 7, CBA used **inject** action to inject script into content script that were providing you only access to web page DOM, now the action provide you ability to inject the code directly into the web page. to inject code into content script please use [cs-inject](/inject-cs) from now.
+`inject` action creates `<script>` tag in the context of the page and executes
+the script. `inject` action doesn't provide you access to the [extensions
+api](https://developer.chrome.com/docs/extensions/reference/), for that reason
+you might want to use [bg-inject](/bg-inject). Also you can use
+[cs-inject](/inject-cs) to inject code into the [content
+script](https://developer.chrome.com/docs/extensions/mv3/content_scripts/), it
+allows you modifing page using with some sugar(i.e. JQuery) and in general is more safe
+as it doesn't conflicting with the page or other extensions content Scripts.
