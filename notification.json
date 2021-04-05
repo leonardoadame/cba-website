@@ -1,9 +1,15 @@
 {
   "disabled": false,
   "match": "^$",
-  "text": "Chromium Browser Automation version 9.0 is out",
+  "text": "Chromium Browser Automation is open source now.",
   "link": {
-    "text": "What's new",
-    "href": "/new_9-0"
+    "text": "Visit us",
+    "href": "https://github.com/browser-automation/cba",
+    "target": "_blank",
+    "image": ""
+  },
+  "image": {
+    "path": "/images/icons/github.png",
+    "alt": "Github icon"
   }
 }
