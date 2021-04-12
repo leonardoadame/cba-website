@@ -34,8 +34,8 @@ opportunity for you to work on a project which will change how automations are
 being created, develop a community around it and partner with us to be one of
 the first people on board on this early stage.
 
-Why I think CBA can be successful -> CBA has more than 43 000 weekly users and
-more than 250 000 downloads, since last month announcement of open sourcing the
-project, it made to front page of Hacker News and brought 35+ stargazers, we are
-going to multiply numbers quite drastically and make CBA one of the type
-automation tool.
+Why we think CBA can be successful -> CBA has **more than 43 000 weekly** users
+and **more than 250 000 downloads**, since last month announcement of open
+sourcing the project, it made to front page of Hacker News and brought 35+
+stargazers, we are going to multiply numbers quite drastically and make CBA one
+of the type automation tool.
