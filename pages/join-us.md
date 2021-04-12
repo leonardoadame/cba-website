@@ -3,7 +3,7 @@ title: Join us developing CBA
 edit: join-us.md
 ---
 
-We are looking for a Frontend developer to help us with the CBA development.
+We are searching for a Frontend engineer to help us with the CBA development.
 Here is whom we are looking for:
 
 - Experienced JavaScript developer with good HTML and CSS skills.
@@ -17,5 +17,5 @@ Here is whom we are looking for:
   is plus.
 - Experience developing browser extensions is plus.
 
-If you like CBA and would like to help us make it better, please do not hesitate
-reaching out to saroyanm@gmail.com.
+If it's you, please do not hesitate reaching out to
+[saroyanm@gmail.com](mailto:saroyanm@gmail.com).
