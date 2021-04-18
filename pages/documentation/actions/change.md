@@ -31,7 +31,15 @@ depending of the value. In example below the `change` action is used to find Dom
 Element with the ID of `#sometextBox` and change the value to hello concatenated
 with 3 charecter length random number (i.e. `Hello123`).
 
-![CBA change action example using clipboard](/images/extension/actions/change.jpg)
+<div data-example="change">
+
+```
+#someTextBox
+```
+```
+Hello<$unique=3>
+```
+</div> 
 
 ### clipboard
 
@@ -44,4 +52,12 @@ in `clipboard` object to update input value:
 so this placeholder will access value of the `name` property from the clipboard
 object(i.e. `clipboard["name"]`).:
 
-![CBA change action example using clipboard](/images/extension/actions/clipboard/placeholder.jpg)
+<div data-example="change">
+
+```
+#chatBox
+```
+```
+Mr.<$clipboard=name>
+```
+</div> 

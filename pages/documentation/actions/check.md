@@ -15,7 +15,7 @@ or
 [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
 and update's it checked state(selects it).
 
-<div class="cba-example check">
+<div data-example="check">
 
 ```
 #age

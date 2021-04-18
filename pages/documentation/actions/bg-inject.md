@@ -8,7 +8,7 @@ edit: documentation/actions/bg-inject.md
 `bg-inject` provides ability of injecting script into backroung page of the
 extension where you can also access browser api.
 
-<div class="cba-example bg-inject">
+<div data-example="bg-inject">
 
 ```
 browser.tabs.create({url: "https://example.org"});
@@ -20,14 +20,14 @@ browser.tabs.create({url: "https://example.org"});
 It's handy to use [clipboard](/clipboard) object to pass data from the page to
 the `bg-inject` actions.
 
-<div class="cba-example copy">
+<div data-example="copy">
 
 ```
 #page-url
 ```
 </div>
 
-<div class="cba-example bg-inject">
+<div data-example="bg-inject">
 
 ```
 browser.tabs.create({url: clipboard["copy"]});
@@ -38,7 +38,7 @@ browser.tabs.create({url: clipboard["copy"]});
 
 `actionToPlay` function is used for jumping to another action.
 
-<div class="cba-example bg-inject">
+<div data-example="bg-inject">
 
 ```
 if (clipboard["jumpToFirstAction"])
@@ -50,10 +50,10 @@ if (clipboard["jumpToFirstAction"])
 
 ## async/await
 
-You can also use async/await in the `cs-inject` that way you can wait for an
+You can also use async/await in the `bg-inject` that way you can wait for an
 async function execution before proceeding with the next action.
 
-<div class="cba-example bg-inject">
+<div data-example="bg-inject">
 
 ```
 const [tab] = await browser.tabs.query({active: true});

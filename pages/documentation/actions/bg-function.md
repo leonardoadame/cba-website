@@ -22,7 +22,7 @@ In that example script removes all cookies for matched domain, in this case
 
 Removes all cookies for matched domain in `attr`.
 
-<div class="cba-example bg-function">
+<div data-example="bg-function">
 
 ```
 <$function=removeCookie>
@@ -34,7 +34,7 @@ Removes all cookies for matched domain in `attr`.
 
 Reloads current tab.
 
-<div class="cba-example bg-function">
+<div data-example="bg-function">
 
 ```
 <$function=reloadCurrentTab>
@@ -46,7 +46,7 @@ Reloads current tab.
 
 Removes current window.
 
-<div class="cba-example bg-function">
+<div data-example="bg-function">
 
 ```
 <$function=removeCurrentWindow>
@@ -57,7 +57,7 @@ Removes current window.
 
 Creates new window
 
-<div class="cba-example bg-function">
+<div data-example="bg-function">
 
 ```
 <$function=windowCreation>

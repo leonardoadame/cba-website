@@ -1,3 +1,5 @@
+require("./_example");
+
 // Mobile Menu
 const mobMenu = document.querySelector("#mobile-nav select");
 mobMenu.addEventListener("change", e =>

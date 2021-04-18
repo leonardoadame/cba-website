@@ -7,7 +7,7 @@ edit: documentation/actions/inject.md
 
 Injects script into web page and iframes.
 
-<div class="cba-example inject">
+<div data-example="inject">
 
 ```
 document.body.innerHTML = "Hello world";
