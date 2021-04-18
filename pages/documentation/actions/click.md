@@ -9,7 +9,7 @@ edit: documentation/actions/click.md
 selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to
 find relevant target and triggers click on that element.
 
-<div class="cba-example click">
+<div data-example="click">
 
 ```
 #closePopup

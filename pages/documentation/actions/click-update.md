@@ -12,7 +12,7 @@ example.
 
 It basically is a `click`+`update` events sequence.
 
-<div class="cba-example click-update">
+<div data-example="click-update">
 
 ```
 #submitBtn

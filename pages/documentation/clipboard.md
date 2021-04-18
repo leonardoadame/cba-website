@@ -16,7 +16,7 @@ You can access and modify the object during script injection using
 [inject](/inject), [cs-inject](/cs-inject) or [bg-inject](/bg-inject) action by
 accessing `clipboard`: 
 
-<div class="cba-example inject">
+<div data-example="inject">
 
 ```
 clipboard["test"] = "hello";
@@ -29,7 +29,7 @@ alert(clipboard["test"]);
 `saveToClipboard` [bg-function](/bg-function) can also be used for adding or
 modifying the Clipboard:
 
-<div class="cba-example bg-function">
+<div data-example="bg-function">
 
 ```
 <$function=saveToClipboard>
