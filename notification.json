@@ -1,6 +1,6 @@
 {
   "disabled": false,
-  "match": "^$",
+  "match": "[\\s\\S]*",
   "text": "We are looking for a Frontend developer.",
   "link": {
     "text": "Join us",
