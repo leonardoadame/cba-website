@@ -23,7 +23,8 @@ If it's you, please do not hesitate reaching out to
 ## What and why
 
 CBA was one of the first chrome extensions that allowed it’s users to boost
-their productivity. The development has been stopped from 2015-2019, as the main
+their productivity using recording, code injection and various automation snippets.
+Unfortunatelly the development has been stopped from 2015-2019, as the main
 maintainter was busy developing Adblock Plus.
 
 Things have changed in 2020, when CBA has been finally rewritten, open sourced
@@ -35,7 +36,6 @@ being created, develop a community around it and partner with us to be one of
 the first people on board on this early stage.
 
 Why we think CBA can be successful -> CBA has **more than 43 000 weekly** users
-and **more than 250 000 downloads**, since last month announcement of open
-sourcing the project, it made to front page of Hacker News and brought 35+
-stargazers, we are going to multiply numbers quite drastically and make CBA one
-of the type automation tool.
+and **more than 250 000 downloads**, team behind CBA has experience developing
+industry leading projects and ready to put all their effort into revolutionizing
+automation creation.
