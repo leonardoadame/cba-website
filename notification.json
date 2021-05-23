@@ -1,5 +1,5 @@
 {
-  "disabled": false,
+  "disabled": true,
   "match": "[\\s\\S]*",
   "text": "We are looking for a Frontend developer.",
   "link": {
