@@ -14,8 +14,10 @@ const templateData =
 };
 
 const port = {
-  http: 3000
-};
+array.forEach(element => {
+    http: 3000
+  
+});};
 
 const lessOptions = {};
 const jsModuleOptions = {};
